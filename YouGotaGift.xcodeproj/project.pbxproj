@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA22786FA0400056B85 /* AppDelegate.swift */; };
 		5DC9DCA52786FA0400056B85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA42786FA0400056B85 /* SceneDelegate.swift */; };
-		5DC9DCA72786FA0400056B85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA62786FA0400056B85 /* ViewController.swift */; };
 		5DC9DCAA2786FA0400056B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA82786FA0400056B85 /* Main.storyboard */; };
 		5DC9DCAC2786FA0600056B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCAB2786FA0600056B85 /* Assets.xcassets */; };
 		5DC9DCAF2786FA0600056B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCAD2786FA0600056B85 /* LaunchScreen.storyboard */; };
 		5DC9DCBA2786FA0700056B85 /* YouGotaGiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCB92786FA0700056B85 /* YouGotaGiftTests.swift */; };
 		5DC9DCC52786FA0700056B85 /* YouGotaGiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCC42786FA0700056B85 /* YouGotaGiftUITests.swift */; };
+		5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCDB2786FCB000056B85 /* HomeViewController.swift */; };
+		5DC9DCDE2786FD9A00056B85 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCDD2786FD9A00056B85 /* CollectionHeaderView.swift */; };
+		5DC9DCE02786FDCC00056B85 /* GiftItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCDF2786FDCC00056B85 /* GiftItemCell.swift */; };
+		5DC9DCE22786FDF300056B85 /* CollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCE12786FDF300056B85 /* CollectionFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 		5DC9DC9F2786FA0400056B85 /* YouGotaGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGotaGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC9DCA22786FA0400056B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DC9DCA42786FA0400056B85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DC9DCA62786FA0400056B85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DC9DCA92786FA0400056B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DC9DCAB2786FA0600056B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DC9DCAE2786FA0600056B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		5DC9DCC02786FA0700056B85 /* YouGotaGiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouGotaGiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC9DCC42786FA0700056B85 /* YouGotaGiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftUITests.swift; sourceTree = "<group>"; };
 		5DC9DCC62786FA0700056B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC9DCDB2786FCB000056B85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5DC9DCDD2786FD9A00056B85 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		5DC9DCDF2786FDCC00056B85 /* GiftItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftItemCell.swift; sourceTree = "<group>"; };
+		5DC9DCE12786FDF300056B85 /* CollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		5DC9DCA12786FA0400056B85 /* YouGotaGift */ = {
 			isa = PBXGroup;
 			children = (
+				5DC9DCD62786FC3900056B85 /* Network */,
+				5DC9DCD52786FC3100056B85 /* View */,
+				5DC9DCD42786FBFE00056B85 /* ViewModel */,
+				5DC9DCD22786FBF300056B85 /* Model */,
 				5DC9DCA22786FA0400056B85 /* AppDelegate.swift */,
 				5DC9DCA42786FA0400056B85 /* SceneDelegate.swift */,
-				5DC9DCA62786FA0400056B85 /* ViewController.swift */,
 				5DC9DCA82786FA0400056B85 /* Main.storyboard */,
 				5DC9DCAB2786FA0600056B85 /* Assets.xcassets */,
 				5DC9DCAD2786FA0600056B85 /* LaunchScreen.storyboard */,
@@ -128,6 +137,70 @@
 			path = YouGotaGiftUITests;
 			sourceTree = "<group>";
 		};
+		5DC9DCD22786FBF300056B85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DC9DCD42786FBFE00056B85 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DC9DCD52786FC3100056B85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DCDA2786FC6600056B85 /* Views */,
+				5DC9DCD92786FC5E00056B85 /* ViewControllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DC9DCD62786FC3900056B85 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DCD82786FC5200056B85 /* Request */,
+				5DC9DCD72786FC4800056B85 /* Resource */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5DC9DCD72786FC4800056B85 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5DC9DCD82786FC5200056B85 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5DC9DCD92786FC5E00056B85 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DCDB2786FCB000056B85 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5DC9DCDA2786FC6600056B85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DCDD2786FD9A00056B85 /* CollectionHeaderView.swift */,
+				5DC9DCDF2786FDCC00056B85 /* GiftItemCell.swift */,
+				5DC9DCE12786FDF300056B85 /* CollectionFooterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +211,7 @@
 				5DC9DC9B2786FA0400056B85 /* Sources */,
 				5DC9DC9C2786FA0400056B85 /* Frameworks */,
 				5DC9DC9D2786FA0400056B85 /* Resources */,
+				5DC9DCE3278700A500056B85 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,14 +327,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5DC9DCE3278700A500056B85 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5DC9DC9B2786FA0400056B85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DC9DCA72786FA0400056B85 /* ViewController.swift in Sources */,
+				5DC9DCDE2786FD9A00056B85 /* CollectionHeaderView.swift in Sources */,
+				5DC9DCE22786FDF300056B85 /* CollectionFooterView.swift in Sources */,
 				5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */,
 				5DC9DCA52786FA0400056B85 /* SceneDelegate.swift in Sources */,
+				5DC9DCE02786FDCC00056B85 /* GiftItemCell.swift in Sources */,
+				5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
