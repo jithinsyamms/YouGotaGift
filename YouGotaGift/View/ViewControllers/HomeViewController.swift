@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
 
      let cellIdentifier = "GiftItemCell"
-     let headerIdentifier = "CollectionHeaderView"
-     let footerIdentifier = "CollectionFooterView"
+     let headerIdentifier = "GiftHeaderView"
+     let footerIdentifier = "GiftFooterView"
 
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(
@@ -20,22 +20,26 @@ class HomeViewController: UIViewController {
         bottom: 10.0,
         right: 10.0)
 
-    var collectionHeaderView: CollectionHeaderView!
-    var collectionFooterView: CollectionFooterView!
+    var collectionHeaderView: GiftHeaderView!
+    var collectionFooterView: GiftFooterView!
 
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        collectionView.register(GiftItemCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(UINib(nibName: "GiftHeaderView", bundle: nil),
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: headerIdentifier)
+        collectionView.register(UINib(nibName: "GiftFooterView", bundle: nil),
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: footerIdentifier)
 
         let resouce = GiftResource()
         let req = GiftRequest(resource: resouce)
-        req.execute { response in
+        req.execute { _ in
 
         }
-            
-
     }
 }
 
@@ -49,7 +53,6 @@ extension HomeViewController: UICollectionViewDataSource {
 
         if let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: cellIdentifier, for: indexPath) as? GiftItemCell {
-            cell.backgroundColor = .black
             return cell
         }
         return UICollectionViewCell()
@@ -63,14 +66,14 @@ extension HomeViewController: UICollectionViewDataSource {
         if kind == UICollectionView.elementKindSectionHeader {
             if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                 withReuseIdentifier: headerIdentifier,
-                                for: indexPath) as? CollectionHeaderView {
+                                for: indexPath) as? GiftHeaderView {
                 reusableView = headerView
                 collectionHeaderView = headerView
 
             }
         } else if kind == UICollectionView.elementKindSectionFooter {
             if let footerView = collectionView.dequeueReusableSupplementaryView(
-                ofKind: kind, withReuseIdentifier: footerIdentifier, for: indexPath) as? CollectionFooterView {
+                ofKind: kind, withReuseIdentifier: footerIdentifier, for: indexPath) as? GiftFooterView {
                 reusableView = footerView
                 collectionFooterView = footerView
             }

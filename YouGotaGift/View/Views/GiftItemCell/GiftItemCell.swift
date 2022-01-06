@@ -9,4 +9,9 @@ import UIKit
 
 class GiftItemCell: UICollectionViewCell {
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
 }

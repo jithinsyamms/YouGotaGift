@@ -15,9 +15,6 @@
 		5DC9DCBA2786FA0700056B85 /* YouGotaGiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCB92786FA0700056B85 /* YouGotaGiftTests.swift */; };
 		5DC9DCC52786FA0700056B85 /* YouGotaGiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCC42786FA0700056B85 /* YouGotaGiftUITests.swift */; };
 		5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCDB2786FCB000056B85 /* HomeViewController.swift */; };
-		5DC9DCDE2786FD9A00056B85 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCDD2786FD9A00056B85 /* CollectionHeaderView.swift */; };
-		5DC9DCE02786FDCC00056B85 /* GiftItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCDF2786FDCC00056B85 /* GiftItemCell.swift */; };
-		5DC9DCE22786FDF300056B85 /* CollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCE12786FDF300056B85 /* CollectionFooterView.swift */; };
 		5DC9DCE527870DCA00056B85 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCE427870DCA00056B85 /* NetworkRequest.swift */; };
 		5DC9DCE727870E0600056B85 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCE627870E0600056B85 /* APIResource.swift */; };
 		5DC9DCE927870E3100056B85 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCE827870E3100056B85 /* NetworkError.swift */; };
@@ -25,6 +22,12 @@
 		5DC9DCEE27870EC500056B85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCED27870EC500056B85 /* Constants.swift */; };
 		5DC9DCF027870F2600056B85 /* GiftRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCEF27870F2600056B85 /* GiftRequest.swift */; };
 		5DC9DCF227870F6000056B85 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCF127870F6000056B85 /* Gift.swift */; };
+		5DC9DCFA27874C8800056B85 /* GiftItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCF827874C8800056B85 /* GiftItemCell.swift */; };
+		5DC9DCFB27874C8800056B85 /* GiftItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCF927874C8800056B85 /* GiftItemCell.xib */; };
+		5DC9DCFE27874CC300056B85 /* GiftHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCFC27874CC300056B85 /* GiftHeaderView.swift */; };
+		5DC9DCFF27874CC300056B85 /* GiftHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCFD27874CC300056B85 /* GiftHeaderView.xib */; };
+		5DC9DD0227874CE300056B85 /* GiftFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0027874CE300056B85 /* GiftFooterView.swift */; };
+		5DC9DD0327874CE300056B85 /* GiftFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0127874CE300056B85 /* GiftFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +62,6 @@
 		5DC9DCC42786FA0700056B85 /* YouGotaGiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftUITests.swift; sourceTree = "<group>"; };
 		5DC9DCC62786FA0700056B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DC9DCDB2786FCB000056B85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5DC9DCDD2786FD9A00056B85 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
-		5DC9DCDF2786FDCC00056B85 /* GiftItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftItemCell.swift; sourceTree = "<group>"; };
-		5DC9DCE12786FDF300056B85 /* CollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFooterView.swift; sourceTree = "<group>"; };
 		5DC9DCE427870DCA00056B85 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		5DC9DCE627870E0600056B85 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
 		5DC9DCE827870E3100056B85 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -69,6 +69,12 @@
 		5DC9DCED27870EC500056B85 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DC9DCEF27870F2600056B85 /* GiftRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftRequest.swift; sourceTree = "<group>"; };
 		5DC9DCF127870F6000056B85 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		5DC9DCF827874C8800056B85 /* GiftItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftItemCell.swift; sourceTree = "<group>"; };
+		5DC9DCF927874C8800056B85 /* GiftItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftItemCell.xib; sourceTree = "<group>"; };
+		5DC9DCFC27874CC300056B85 /* GiftHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftHeaderView.swift; sourceTree = "<group>"; };
+		5DC9DCFD27874CC300056B85 /* GiftHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftHeaderView.xib; sourceTree = "<group>"; };
+		5DC9DD0027874CE300056B85 /* GiftFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftFooterView.swift; sourceTree = "<group>"; };
+		5DC9DD0127874CE300056B85 /* GiftFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,9 +221,9 @@
 		5DC9DCDA2786FC6600056B85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5DC9DCDD2786FD9A00056B85 /* CollectionHeaderView.swift */,
-				5DC9DCDF2786FDCC00056B85 /* GiftItemCell.swift */,
-				5DC9DCE12786FDF300056B85 /* CollectionFooterView.swift */,
+				5DC9DCF727874C6400056B85 /* GiftFooter */,
+				5DC9DCF627874C4E00056B85 /* GiftHeader */,
+				5DC9DCF527874C4300056B85 /* GiftItemCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +234,33 @@
 				5DC9DCED27870EC500056B85 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5DC9DCF527874C4300056B85 /* GiftItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DCF827874C8800056B85 /* GiftItemCell.swift */,
+				5DC9DCF927874C8800056B85 /* GiftItemCell.xib */,
+			);
+			path = GiftItemCell;
+			sourceTree = "<group>";
+		};
+		5DC9DCF627874C4E00056B85 /* GiftHeader */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DCFC27874CC300056B85 /* GiftHeaderView.swift */,
+				5DC9DCFD27874CC300056B85 /* GiftHeaderView.xib */,
+			);
+			path = GiftHeader;
+			sourceTree = "<group>";
+		};
+		5DC9DCF727874C6400056B85 /* GiftFooter */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DD0027874CE300056B85 /* GiftFooterView.swift */,
+				5DC9DD0127874CE300056B85 /* GiftFooterView.xib */,
+			);
+			path = GiftFooter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +368,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DC9DCAF2786FA0600056B85 /* LaunchScreen.storyboard in Resources */,
+				5DC9DD0327874CE300056B85 /* GiftFooterView.xib in Resources */,
 				5DC9DCAC2786FA0600056B85 /* Assets.xcassets in Resources */,
+				5DC9DCFB27874C8800056B85 /* GiftItemCell.xib in Resources */,
+				5DC9DCFF27874CC300056B85 /* GiftHeaderView.xib in Resources */,
 				5DC9DCAA2786FA0400056B85 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,13 +420,13 @@
 				5DC9DCE527870DCA00056B85 /* NetworkRequest.swift in Sources */,
 				5DC9DCEE27870EC500056B85 /* Constants.swift in Sources */,
 				5DC9DCEB27870E7D00056B85 /* GiftResource.swift in Sources */,
-				5DC9DCDE2786FD9A00056B85 /* CollectionHeaderView.swift in Sources */,
-				5DC9DCE22786FDF300056B85 /* CollectionFooterView.swift in Sources */,
+				5DC9DD0227874CE300056B85 /* GiftFooterView.swift in Sources */,
+				5DC9DCFE27874CC300056B85 /* GiftHeaderView.swift in Sources */,
 				5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */,
 				5DC9DCF227870F6000056B85 /* Gift.swift in Sources */,
 				5DC9DCA52786FA0400056B85 /* SceneDelegate.swift in Sources */,
-				5DC9DCE02786FDCC00056B85 /* GiftItemCell.swift in Sources */,
 				5DC9DCE927870E3100056B85 /* NetworkError.swift in Sources */,
+				5DC9DCFA27874C8800056B85 /* GiftItemCell.swift in Sources */,
 				5DC9DCE727870E0600056B85 /* APIResource.swift in Sources */,
 				5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */,
 				5DC9DCF027870F2600056B85 /* GiftRequest.swift in Sources */,

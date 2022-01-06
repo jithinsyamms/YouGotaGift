@@ -25,9 +25,9 @@ struct GiftResource: APIResource {
     }
 
     var parameters: [URLQueryItem] {
-        var params:[URLQueryItem] = []
-        params.append(URLQueryItem(name: "api_key", value:"2vq1M9ye4eV6H1Mr"))
-        params.append(URLQueryItem(name: "api_secret", value:"wnRY14QoA99B4Ae6wn2CU2y8"))
+        var params: [URLQueryItem] = []
+        params.append(URLQueryItem(name: "api_key", value: "2vq1M9ye4eV6H1Mr"))
+        params.append(URLQueryItem(name: "api_secret", value: "wnRY14QoA99B4Ae6wn2CU2y8"))
         return params
     }
 
