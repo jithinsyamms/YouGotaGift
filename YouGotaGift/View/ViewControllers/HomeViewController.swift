@@ -27,6 +27,15 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        let resouce = GiftResource()
+        let req = GiftRequest(resource: resouce)
+        req.execute { response in
+
+        }
+            
+
     }
 }
 
