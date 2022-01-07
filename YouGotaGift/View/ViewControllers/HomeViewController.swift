@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(GiftItemCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(UINib(nibName: "GiftItemCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         collectionView.register(UINib(nibName: "GiftHeaderView", bundle: nil),
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
@@ -53,6 +53,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
         if let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: cellIdentifier, for: indexPath) as? GiftItemCell {
+            cell.setData()
             return cell
         }
         return UICollectionViewCell()
@@ -69,6 +70,7 @@ extension HomeViewController: UICollectionViewDataSource {
                                 for: indexPath) as? GiftHeaderView {
                 reusableView = headerView
                 collectionHeaderView = headerView
+                collectionHeaderView.setData()
 
             }
         } else if kind == UICollectionView.elementKindSectionFooter {

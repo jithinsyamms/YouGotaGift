@@ -28,6 +28,7 @@
 		5DC9DCFF27874CC300056B85 /* GiftHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCFD27874CC300056B85 /* GiftHeaderView.xib */; };
 		5DC9DD0227874CE300056B85 /* GiftFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0027874CE300056B85 /* GiftFooterView.swift */; };
 		5DC9DD0327874CE300056B85 /* GiftFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0127874CE300056B85 /* GiftFooterView.xib */; };
+		5DC9DD06278764E800056B85 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DD05278764E800056B85 /* ImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		5DC9DCFD27874CC300056B85 /* GiftHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftHeaderView.xib; sourceTree = "<group>"; };
 		5DC9DD0027874CE300056B85 /* GiftFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftFooterView.swift; sourceTree = "<group>"; };
 		5DC9DD0127874CE300056B85 /* GiftFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftFooterView.xib; sourceTree = "<group>"; };
+		5DC9DD05278764E800056B85 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		5DC9DCA12786FA0400056B85 /* YouGotaGift */ = {
 			isa = PBXGroup;
 			children = (
+				5DC9DD04278764D600056B85 /* Utils */,
 				5DC9DCEC27870EB600056B85 /* Constants */,
 				5DC9DCD62786FC3900056B85 /* Network */,
 				5DC9DCD52786FC3100056B85 /* View */,
@@ -261,6 +264,14 @@
 				5DC9DD0127874CE300056B85 /* GiftFooterView.xib */,
 			);
 			path = GiftFooter;
+			sourceTree = "<group>";
+		};
+		5DC9DD04278764D600056B85 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DD05278764E800056B85 /* ImageView+Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +440,7 @@
 				5DC9DCFA27874C8800056B85 /* GiftItemCell.swift in Sources */,
 				5DC9DCE727870E0600056B85 /* APIResource.swift in Sources */,
 				5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */,
+				5DC9DD06278764E800056B85 /* ImageView+Extension.swift in Sources */,
 				5DC9DCF027870F2600056B85 /* GiftRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
