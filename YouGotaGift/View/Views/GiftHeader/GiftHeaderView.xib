@@ -24,14 +24,14 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-bA-4gk">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="198"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nh-39g">
-                                    <rect key="frame" x="164.5" y="88.5" width="32" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send eGift Cards from home" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nh-39g">
+                                    <rect key="frame" x="65.5" y="88.5" width="230.5" height="21"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-By-hXB">
-                                    <rect key="frame" x="155" y="114.5" width="51" height="18"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital Gift Cards delivered by Email or SMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-By-hXB">
+                                    <rect key="frame" x="31.5" y="114.5" width="298.5" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -49,21 +49,25 @@
                                 <constraint firstAttribute="trailing" secondItem="JAU-bA-4gk" secondAttribute="trailing" id="srw-Qw-CHk"/>
                             </constraints>
                         </view>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="azO-2G-qqH">
-                            <rect key="frame" x="5" y="208" width="351" height="70"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="azO-2G-qqH">
+                            <rect key="frame" x="8" y="208" width="345" height="80"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="70" id="0qc-Y8-HUc"/>
+                                <constraint firstAttribute="height" constant="80" id="fTa-vS-iyw"/>
                             </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iwb-43-H3b">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iwb-43-H3b">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="U6b-Vx-4bR" id="jPz-ac-DpP"/>
+                                <outlet property="delegate" destination="U6b-Vx-4bR" id="UtU-32-Q0V"/>
+                            </connections>
                         </collectionView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-Ap-eHw">
-                            <rect key="frame" x="127" y="288" width="107.5" height="21"/>
+                            <rect key="frame" x="127" y="298" width="107.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -71,10 +75,10 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="azO-2G-qqH" secondAttribute="trailing" constant="5" id="H0a-pk-Hyy"/>
+                        <constraint firstAttribute="trailing" secondItem="azO-2G-qqH" secondAttribute="trailing" constant="8" id="H0a-pk-Hyy"/>
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="top" secondItem="azO-2G-qqH" secondAttribute="bottom" constant="10" id="H1r-Kh-KRz"/>
                         <constraint firstAttribute="trailing" secondItem="Ij1-EN-ey9" secondAttribute="trailing" id="MvA-m9-Nfy"/>
-                        <constraint firstItem="azO-2G-qqH" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" constant="5" id="NYW-Sc-4JR"/>
+                        <constraint firstItem="azO-2G-qqH" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" constant="8" id="NYW-Sc-4JR"/>
                         <constraint firstItem="Ij1-EN-ey9" firstAttribute="top" secondItem="aRL-EW-MaK" secondAttribute="top" id="fq3-FP-i4t"/>
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="centerX" secondItem="aRL-EW-MaK" secondAttribute="centerX" id="s21-v2-AgU"/>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="top" secondItem="Ij1-EN-ey9" secondAttribute="bottom" constant="10" id="s7p-oA-l7O"/>

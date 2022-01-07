@@ -29,6 +29,8 @@
 		5DC9DD0227874CE300056B85 /* GiftFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0027874CE300056B85 /* GiftFooterView.swift */; };
 		5DC9DD0327874CE300056B85 /* GiftFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0127874CE300056B85 /* GiftFooterView.xib */; };
 		5DC9DD06278764E800056B85 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DD05278764E800056B85 /* ImageView+Extension.swift */; };
+		5DC9DD102788105A00056B85 /* GiftCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0E2788105A00056B85 /* GiftCategoryCell.swift */; };
+		5DC9DD112788105A00056B85 /* GiftCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DD0F2788105A00056B85 /* GiftCategoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		5DC9DD0027874CE300056B85 /* GiftFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftFooterView.swift; sourceTree = "<group>"; };
 		5DC9DD0127874CE300056B85 /* GiftFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftFooterView.xib; sourceTree = "<group>"; };
 		5DC9DD05278764E800056B85 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
+		5DC9DD0E2788105A00056B85 /* GiftCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCategoryCell.swift; sourceTree = "<group>"; };
+		5DC9DD0F2788105A00056B85 /* GiftCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftCategoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +137,10 @@
 				5DC9DCD52786FC3100056B85 /* View */,
 				5DC9DCD42786FBFE00056B85 /* ViewModel */,
 				5DC9DCD22786FBF300056B85 /* Model */,
+				5DC9DD12278815E300056B85 /* Resources */,
 				5DC9DCA22786FA0400056B85 /* AppDelegate.swift */,
 				5DC9DCA42786FA0400056B85 /* SceneDelegate.swift */,
 				5DC9DCA82786FA0400056B85 /* Main.storyboard */,
-				5DC9DCAB2786FA0600056B85 /* Assets.xcassets */,
 				5DC9DCAD2786FA0600056B85 /* LaunchScreen.storyboard */,
 				5DC9DCB02786FA0600056B85 /* Info.plist */,
 			);
@@ -224,6 +228,7 @@
 		5DC9DCDA2786FC6600056B85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5DC9DD0D2788103500056B85 /* GiftCategoryCell */,
 				5DC9DCF727874C6400056B85 /* GiftFooter */,
 				5DC9DCF627874C4E00056B85 /* GiftHeader */,
 				5DC9DCF527874C4300056B85 /* GiftItemCell */,
@@ -272,6 +277,23 @@
 				5DC9DD05278764E800056B85 /* ImageView+Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5DC9DD0D2788103500056B85 /* GiftCategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DD0E2788105A00056B85 /* GiftCategoryCell.swift */,
+				5DC9DD0F2788105A00056B85 /* GiftCategoryCell.xib */,
+			);
+			path = GiftCategoryCell;
+			sourceTree = "<group>";
+		};
+		5DC9DD12278815E300056B85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DC9DCAB2786FA0600056B85 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC9DD112788105A00056B85 /* GiftCategoryCell.xib in Resources */,
 				5DC9DCAF2786FA0600056B85 /* LaunchScreen.storyboard in Resources */,
 				5DC9DD0327874CE300056B85 /* GiftFooterView.xib in Resources */,
 				5DC9DCAC2786FA0600056B85 /* Assets.xcassets in Resources */,
@@ -438,6 +461,7 @@
 				5DC9DCA52786FA0400056B85 /* SceneDelegate.swift in Sources */,
 				5DC9DCE927870E3100056B85 /* NetworkError.swift in Sources */,
 				5DC9DCFA27874C8800056B85 /* GiftItemCell.swift in Sources */,
+				5DC9DD102788105A00056B85 /* GiftCategoryCell.swift in Sources */,
 				5DC9DCE727870E0600056B85 /* APIResource.swift in Sources */,
 				5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */,
 				5DC9DD06278764E800056B85 /* ImageView+Extension.swift in Sources */,
