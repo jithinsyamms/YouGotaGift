@@ -50,8 +50,8 @@
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="azO-2G-qqH">
-                            <rect key="frame" x="8" y="208" width="345" height="80"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <rect key="frame" x="0.0" y="208" width="361" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="fTa-vS-iyw"/>
                             </constraints>
@@ -73,12 +73,12 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="azO-2G-qqH" secondAttribute="trailing" constant="8" id="H0a-pk-Hyy"/>
+                        <constraint firstAttribute="trailing" secondItem="azO-2G-qqH" secondAttribute="trailing" id="H0a-pk-Hyy"/>
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="top" secondItem="azO-2G-qqH" secondAttribute="bottom" constant="10" id="H1r-Kh-KRz"/>
                         <constraint firstAttribute="trailing" secondItem="Ij1-EN-ey9" secondAttribute="trailing" id="MvA-m9-Nfy"/>
-                        <constraint firstItem="azO-2G-qqH" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" constant="8" id="NYW-Sc-4JR"/>
+                        <constraint firstItem="azO-2G-qqH" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" id="NYW-Sc-4JR"/>
                         <constraint firstItem="Ij1-EN-ey9" firstAttribute="top" secondItem="aRL-EW-MaK" secondAttribute="top" id="fq3-FP-i4t"/>
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="centerX" secondItem="aRL-EW-MaK" secondAttribute="centerX" id="s21-v2-AgU"/>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="top" secondItem="Ij1-EN-ey9" secondAttribute="bottom" constant="10" id="s7p-oA-l7O"/>
@@ -111,6 +111,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

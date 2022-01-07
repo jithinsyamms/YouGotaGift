@@ -15,6 +15,13 @@ class GiftHeaderView: UICollectionReusableView {
     @IBOutlet weak var categoryCollection: UICollectionView!
     @IBOutlet weak var categoryTitle: UILabel!
 
+    private let itemsPerRow: CGFloat = 2.5
+    private let sectionInsets = UIEdgeInsets(
+        top: 0.0,
+        left: 8.0,
+        bottom: 0.0,
+        right: 8.0)
+
     override func awakeFromNib() {
         super.awakeFromNib()
         categoryCollection.register(UINib(nibName: "GiftCategoryCell",
@@ -45,9 +52,17 @@ extension GiftHeaderView: UICollectionViewDataSource {
 }
 
 extension GiftHeaderView: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (categoryCollection.bounds.size.width/2.5)
-        let height = categoryCollection.bounds.size.height
-        return CGSize(width: width, height: height)
+
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let widthPerItem = categoryCollection.bounds.size.width/2.5
+        let heightPerItem = categoryCollection.bounds.size.height
+        return CGSize(width: widthPerItem, height: heightPerItem)
+    }
+
+    func collectionView( _ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                         insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
     }
 }

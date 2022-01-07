@@ -9,9 +9,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-     let cellIdentifier = "GiftItemCell"
-     let headerIdentifier = "GiftHeaderView"
-     let footerIdentifier = "GiftFooterView"
+    let cellIdentifier = "GiftItemCell"
+    let headerIdentifier = "GiftHeaderView"
+    let footerIdentifier = "GiftFooterView"
 
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(
@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         collectionView.register(UINib(nibName: "GiftItemCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         collectionView.register(UINib(nibName: "GiftHeaderView", bundle: nil),
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -40,6 +41,12 @@ class HomeViewController: UIViewController {
         req.execute { _ in
 
         }
+    }
+
+    func setNavigationBar() {
+        let logo = UIImage(named: "Icon-29")
+        let imageView = UIImageView(image: logo)
+        self.navigationItem.titleView = imageView
     }
 }
 
