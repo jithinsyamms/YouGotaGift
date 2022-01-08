@@ -11,26 +11,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GiftHeaderView" id="U6b-Vx-4bR" customClass="GiftHeaderView" customModule="YouGotaGift" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="361" height="283"/>
+            <rect key="frame" x="0.0" y="0.0" width="396" height="389"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRL-EW-MaK">
-                    <rect key="frame" x="0.0" y="0.0" width="361" height="283"/>
+                    <rect key="frame" x="0.0" y="0.0" width="396" height="389"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ij1-EN-ey9" userLabel="headerView">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="192.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="253"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-bA-4gk">
-                                    <rect key="frame" x="0.0" y="0.0" width="361" height="192.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="396" height="253"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send eGift Cards from home" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nh-39g">
-                                    <rect key="frame" x="59" y="85.5" width="243.5" height="21"/>
+                                    <rect key="frame" x="76.5" y="116" width="243.5" height="21"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital Gift Cards delivered by Email or SMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-By-hXB">
-                                    <rect key="frame" x="31.5" y="111.5" width="298.5" height="18"/>
+                                    <rect key="frame" x="49" y="142" width="298.5" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="azO-2G-qqH">
-                            <rect key="frame" x="0.0" y="202.5" width="361" height="56.5"/>
+                            <rect key="frame" x="0.0" y="263" width="396" height="77.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iwb-43-H3b">
                                 <size key="itemSize" width="128" height="128"/>
@@ -63,8 +63,8 @@
                             </connections>
                         </collectionView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-Ap-eHw">
-                            <rect key="frame" x="180.5" y="269" width="0.0" height="0.0"/>
-                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                            <rect key="frame" x="198" y="345.5" width="0.0" height="58.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -73,14 +73,15 @@
                     <constraints>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.2" id="A91-5E-JEc"/>
                         <constraint firstAttribute="trailing" secondItem="azO-2G-qqH" secondAttribute="trailing" id="H0a-pk-Hyy"/>
-                        <constraint firstItem="Bk3-Ap-eHw" firstAttribute="top" secondItem="azO-2G-qqH" secondAttribute="bottom" constant="10" id="H1r-Kh-KRz"/>
+                        <constraint firstItem="Bk3-Ap-eHw" firstAttribute="top" secondItem="azO-2G-qqH" secondAttribute="bottom" constant="5" id="H1r-Kh-KRz"/>
                         <constraint firstAttribute="trailing" secondItem="Ij1-EN-ey9" secondAttribute="trailing" id="MvA-m9-Nfy"/>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" id="NYW-Sc-4JR"/>
+                        <constraint firstItem="Bk3-Ap-eHw" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.15" id="bOg-w0-GK3"/>
                         <constraint firstItem="Ij1-EN-ey9" firstAttribute="top" secondItem="aRL-EW-MaK" secondAttribute="top" id="fq3-FP-i4t"/>
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="centerX" secondItem="aRL-EW-MaK" secondAttribute="centerX" id="s21-v2-AgU"/>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="top" secondItem="Ij1-EN-ey9" secondAttribute="bottom" constant="10" id="s7p-oA-l7O"/>
                         <constraint firstItem="Ij1-EN-ey9" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" id="uLg-cz-ko1"/>
-                        <constraint firstItem="Ij1-EN-ey9" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.68" id="xUX-in-KP7"/>
+                        <constraint firstItem="Ij1-EN-ey9" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.65" id="xUX-in-KP7"/>
                     </constraints>
                 </view>
             </subviews>
@@ -102,7 +103,7 @@
                 <outlet property="headerSubtitle" destination="FE2-By-hXB" id="Lam-GE-RQ1"/>
                 <outlet property="headerTitle" destination="gdx-nh-39g" id="LgH-p7-JYw"/>
             </connections>
-            <point key="canvasLocation" x="39.855072463768117" y="128.90625"/>
+            <point key="canvasLocation" x="65.217391304347828" y="164.39732142857142"/>
         </collectionReusableView>
     </objects>
 </document>
