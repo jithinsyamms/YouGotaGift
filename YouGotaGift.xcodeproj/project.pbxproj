@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D9DA6D82789630E0021E50C /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D72789630E0021E50C /* GiftData.swift */; };
+		5D9DA6DA278968710021E50C /* GiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D9278968710021E50C /* GiftDataModel.swift */; };
 		5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA22786FA0400056B85 /* AppDelegate.swift */; };
 		5DC9DCA52786FA0400056B85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA42786FA0400056B85 /* SceneDelegate.swift */; };
 		5DC9DCAA2786FA0400056B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA82786FA0400056B85 /* Main.storyboard */; };
@@ -21,7 +23,6 @@
 		5DC9DCEB27870E7D00056B85 /* GiftResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCEA27870E7D00056B85 /* GiftResource.swift */; };
 		5DC9DCEE27870EC500056B85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCED27870EC500056B85 /* Constants.swift */; };
 		5DC9DCF027870F2600056B85 /* GiftRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCEF27870F2600056B85 /* GiftRequest.swift */; };
-		5DC9DCF227870F6000056B85 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCF127870F6000056B85 /* Gift.swift */; };
 		5DC9DCFA27874C8800056B85 /* GiftItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCF827874C8800056B85 /* GiftItemCell.swift */; };
 		5DC9DCFB27874C8800056B85 /* GiftItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCF927874C8800056B85 /* GiftItemCell.xib */; };
 		5DC9DCFE27874CC300056B85 /* GiftHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCFC27874CC300056B85 /* GiftHeaderView.swift */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D9DA6D72789630E0021E50C /* GiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
+		5D9DA6D9278968710021E50C /* GiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDataModel.swift; sourceTree = "<group>"; };
 		5DC9DC9F2786FA0400056B85 /* YouGotaGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGotaGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC9DCA22786FA0400056B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DC9DCA42786FA0400056B85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 		5DC9DCEA27870E7D00056B85 /* GiftResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftResource.swift; sourceTree = "<group>"; };
 		5DC9DCED27870EC500056B85 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DC9DCEF27870F2600056B85 /* GiftRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftRequest.swift; sourceTree = "<group>"; };
-		5DC9DCF127870F6000056B85 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		5DC9DCF827874C8800056B85 /* GiftItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftItemCell.swift; sourceTree = "<group>"; };
 		5DC9DCF927874C8800056B85 /* GiftItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftItemCell.xib; sourceTree = "<group>"; };
 		5DC9DCFC27874CC300056B85 /* GiftHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftHeaderView.swift; sourceTree = "<group>"; };
@@ -168,7 +170,7 @@
 		5DC9DCD22786FBF300056B85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5DC9DCF127870F6000056B85 /* Gift.swift */,
+				5D9DA6D72789630E0021E50C /* GiftData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +178,7 @@
 		5DC9DCD42786FBFE00056B85 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5D9DA6D9278968710021E50C /* GiftDataModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -454,10 +457,10 @@
 				5DC9DCE527870DCA00056B85 /* NetworkRequest.swift in Sources */,
 				5DC9DCEE27870EC500056B85 /* Constants.swift in Sources */,
 				5DC9DCEB27870E7D00056B85 /* GiftResource.swift in Sources */,
+				5D9DA6DA278968710021E50C /* GiftDataModel.swift in Sources */,
 				5DC9DD0227874CE300056B85 /* GiftFooterView.swift in Sources */,
 				5DC9DCFE27874CC300056B85 /* GiftHeaderView.swift in Sources */,
 				5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */,
-				5DC9DCF227870F6000056B85 /* Gift.swift in Sources */,
 				5DC9DCA52786FA0400056B85 /* SceneDelegate.swift in Sources */,
 				5DC9DCE927870E3100056B85 /* NetworkError.swift in Sources */,
 				5DC9DCFA27874C8800056B85 /* GiftItemCell.swift in Sources */,
@@ -466,6 +469,7 @@
 				5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */,
 				5DC9DD06278764E800056B85 /* ImageView+Extension.swift in Sources */,
 				5DC9DCF027870F2600056B85 /* GiftRequest.swift in Sources */,
+				5D9DA6D82789630E0021E50C /* GiftData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,19 +19,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="361" height="283"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ij1-EN-ey9" userLabel="headerView">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="198"/>
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="170"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-bA-4gk">
-                                    <rect key="frame" x="0.0" y="0.0" width="361" height="198"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-bA-4gk">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="170"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send eGift Cards from home" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nh-39g">
-                                    <rect key="frame" x="65.5" y="88.5" width="230.5" height="21"/>
+                                    <rect key="frame" x="65.5" y="74.5" width="230.5" height="21"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital Gift Cards delivered by Email or SMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-By-hXB">
-                                    <rect key="frame" x="31.5" y="114.5" width="298.5" height="18"/>
+                                    <rect key="frame" x="31.5" y="100.5" width="298.5" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="azO-2G-qqH">
-                            <rect key="frame" x="0.0" y="208" width="361" height="80"/>
+                            <rect key="frame" x="0.0" y="180" width="361" height="80"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="fTa-vS-iyw"/>
@@ -67,7 +67,7 @@
                             </connections>
                         </collectionView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-Ap-eHw">
-                            <rect key="frame" x="127" y="298" width="107.5" height="21"/>
+                            <rect key="frame" x="127" y="270" width="107.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="centerX" secondItem="aRL-EW-MaK" secondAttribute="centerX" id="s21-v2-AgU"/>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="top" secondItem="Ij1-EN-ey9" secondAttribute="bottom" constant="10" id="s7p-oA-l7O"/>
                         <constraint firstItem="Ij1-EN-ey9" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" id="uLg-cz-ko1"/>
-                        <constraint firstItem="Ij1-EN-ey9" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.7" id="xUX-in-KP7"/>
+                        <constraint firstItem="Ij1-EN-ey9" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.6" id="xUX-in-KP7"/>
                     </constraints>
                 </view>
             </subviews>

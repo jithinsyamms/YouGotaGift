@@ -22,28 +22,42 @@ class GiftHeaderView: UICollectionReusableView {
         bottom: 0.0,
         right: 8.0)
 
+    private var giftCategories: [GiftCategory]?
+    private var selectedCategory: GiftCategory?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         categoryCollection.register(UINib(nibName: "GiftCategoryCell",
                                     bundle: nil), forCellWithReuseIdentifier: "GiftCategoryCell")
     }
 
-    func setData() {
-        headerImage.loadImageFromURL(urlString: "https://source.unsplash.com/user/c_v_r/100x100")
-    }
+    func setData(categories: [GiftCategory]?, selectedCategory: GiftCategory?) {
 
+        guard let categories = categories, let selectedCategory = selectedCategory else {
+            return
+        }
+        self.selectedCategory = selectedCategory
+        self.giftCategories = categories
+        headerImage.alpha = 0.9
+        if let categoryImageUrl = selectedCategory.imageLarge {
+            headerImage.loadImageFromURL(urlString: categoryImageUrl)
+        }
+        headerTitle.text = selectedCategory.title ?? ""
+        headerSubtitle.text = selectedCategory.caption ?? ""
+        categoryCollection.reloadData()
+    }
 }
 
 extension GiftHeaderView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return giftCategories?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = categoryCollection.dequeueReusableCell(
             withReuseIdentifier: "GiftCategoryCell", for: indexPath) as? GiftCategoryCell {
-            cell.setData()
+            cell.setData(category: giftCategories?[indexPath.row])
             return cell
         }
         return UICollectionViewCell()

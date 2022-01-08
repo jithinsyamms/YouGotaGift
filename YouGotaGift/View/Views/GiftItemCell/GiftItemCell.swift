@@ -19,16 +19,26 @@ class GiftItemCell: UICollectionViewCell {
     @IBOutlet weak var taglineLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
-    func setData() {
+    func setData(brand: GiftBrand?) {
+
+        guard let giftBrand = brand else {
+            return
+        }
         root.layer.cornerRadius = 10
         root.layer.borderColor = UIColor.lightGray.cgColor
         root.layer.borderWidth = 0.3
         topLeftView.layer.cornerRadius = 10
         giftImage.layer.cornerRadius = 10
-        giftImage.loadImageFromURL(urlString: "https://source.unsplash.com/user/c_v_r/1900x800")
+
+        nameLabel.text = giftBrand.name
+        taglineLabel.text = giftBrand.shortTagline
+        if let productImageUrl = giftBrand.productImage {
+            giftImage.loadImageFromURL(urlString: productImageUrl)
+        }
+
     }
 
 }

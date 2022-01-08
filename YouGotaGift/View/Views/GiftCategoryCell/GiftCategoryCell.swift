@@ -17,12 +17,23 @@ class GiftCategoryCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    func setData() {
+    func setData(category: GiftCategory?) {
 
+        guard let giftCategory = category else {
+            return
+        }
         rootView.layer.cornerRadius = 8
         rootView.layer.borderWidth = 0.2
         rootView.layer.borderColor = UIColor.lightGray.cgColor
-        selectedImage.layer.cornerRadius = 8
-        rootView.backgroundColor = UIColor.purple
+        categoryImage.layer.cornerRadius = 8
+        categoryImage.clipsToBounds = true
+        
+        categotyTitle.text = giftCategory.name
+        if let image = giftCategory.imageSmall {
+            categoryImage.loadImageFromURL(urlString: image)
+        }
+
+
+        //rootView.backgroundColor = UIColor.purple
     }
 }

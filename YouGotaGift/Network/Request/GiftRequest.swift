@@ -16,11 +16,11 @@ struct GiftRequest<Resource: APIResource> {
 }
 extension GiftRequest: NetworkRequest {
 
-    typealias Model = Gift
-    func decode(_ data: Data) -> Gift? {
+    typealias Model = Resource.Model
+    func decode(_ data: Data) -> Model? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .millisecondsSince1970
-        return try? decoder.decode(Gift.self, from: data)
+        return try? decoder.decode(Model.self, from: data)
     }
 
     func execute(withCompletion completion: @escaping (Result<Model?, Error>) -> Void) {

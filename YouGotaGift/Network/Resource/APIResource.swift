@@ -26,7 +26,9 @@ extension APIResource {
         components.queryItems = parameters
         return components.url
     }
-
+    var scheme: String {
+        "https"
+    }
     var parameters: [URLQueryItem] {
         return []
     }

@@ -25,6 +25,11 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    private let giftDataModel = GiftDataModel()
+
+    private var giftBrands: [GiftBrand]?
+    private var giftCategories: [GiftCategory]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
@@ -36,11 +41,8 @@ class HomeViewController: UIViewController {
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: footerIdentifier)
 
-        let resouce = GiftResource()
-        let req = GiftRequest(resource: resouce)
-        req.execute { _ in
-
-        }
+        giftDataModel.delegate = self
+        giftDataModel.fetchGifts()
     }
 
     func setNavigationBar() {
@@ -50,9 +52,27 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: GiftDataDelegate {
+    func loadingStarted() {
+       print("loadingStarted")
+    }
+
+    func loadingFinished() {
+        giftBrands = giftDataModel.getGiftBrands()
+        giftCategories = giftDataModel.getCategories()
+        self.collectionView.reloadData()
+    }
+
+    func errorLoadingData() {
+        print("errorLoadingData")
+    }
+
+}
+
 extension HomeViewController: UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return giftBrands?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -60,7 +80,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
         if let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: cellIdentifier, for: indexPath) as? GiftItemCell {
-            cell.setData()
+            cell.setData(brand: giftBrands?[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -77,7 +97,7 @@ extension HomeViewController: UICollectionViewDataSource {
                                 for: indexPath) as? GiftHeaderView {
                 reusableView = headerView
                 collectionHeaderView = headerView
-                collectionHeaderView.setData()
+                collectionHeaderView.setData(categories: giftCategories, selectedCategory: giftCategories?[0])
 
             }
         } else if kind == UICollectionView.elementKindSectionFooter {
