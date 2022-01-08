@@ -14,9 +14,15 @@ protocol GiftDataDelegate: AnyObject {
 }
 
 class GiftDataModel {
+
     var giftData: GiftData?
     weak var delegate: GiftDataDelegate?
     var isLoading: Bool = false
+
+    var giftCategories: [GiftCategory] = []
+    var brandDict: [Int: [GiftBrand]] = [:]
+    var paginatedData: [Int: PaginatedData] = [:]
+    var selectedCategoryId: Int  = -1
 
     func fetchGifts() {
         guard !isLoading else {
@@ -40,6 +46,10 @@ class GiftDataModel {
                 self.delegate?.loadingFinished()
             }
         }
+    }
+
+    func categorySelected(categoryId: Int) {
+       
     }
 
     func getCategotyCount() -> Int {

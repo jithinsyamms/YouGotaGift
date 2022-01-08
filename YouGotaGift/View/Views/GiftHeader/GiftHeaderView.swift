@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CategoryProtocol: AnyObject{
+    func categorySelected(categoryId:Int)
+}
+
 class GiftHeaderView: UICollectionReusableView {
 
     @IBOutlet weak var headerImage: UIImageView!
@@ -24,6 +28,7 @@ class GiftHeaderView: UICollectionReusableView {
 
     private var giftCategories: [GiftCategory]?
     private var selectedCategory: GiftCategory?
+    weak var delegate:CategoryProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -63,6 +68,9 @@ extension GiftHeaderView: UICollectionViewDataSource {
         return UICollectionViewCell()
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.categorySelected(categoryId: giftCategories?[indexPath.row].id ?? 0 )
+    }
 }
 
 extension GiftHeaderView: UICollectionViewDelegateFlowLayout {

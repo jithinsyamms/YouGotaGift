@@ -145,3 +145,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionView.frame.width, height: 30)
     }
 }
+
+extension HomeViewController: CategoryProtocol {
+    func categorySelected(categoryId: Int) {
+        giftDataModel.categorySelected(categoryId: categoryId)
+    }
+}

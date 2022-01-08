@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct GiftData: Codable {
     let label: String?
     let paginatedData: PaginatedData?
@@ -30,7 +29,7 @@ struct GiftBrand: Codable {
     let name: String?
     let logo: String?
     let productImage: String?
-    let shortTagline:String?
+    let shortTagline: String?
     let brandCode: String?
     let isGeneric: Bool?
     let seoName: String?
@@ -57,12 +56,11 @@ enum Currency: String, Codable {
     case aed = "AED"
 }
 
-
 struct GiftCategory: Codable {
     let id: Int
-    let name:String?
+    let name: String?
     let seoName: String?
-    let imageLarge:String?
+    let imageLarge: String?
     let imageSmall: String?
     let title: String?
     let caption: String?
@@ -84,13 +82,11 @@ struct GiftCategory: Codable {
     }
 }
 
-
 struct PaginatedData: Codable {
     let count: Int?
     let previous: String?
     let next: String?
 }
-
 
 struct SelectedCategory: Codable {
     let id: Int

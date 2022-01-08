@@ -17,7 +17,7 @@ class GiftCategoryCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    func setData(category: GiftCategory?, selectedId:Int) {
+    func setData(category: GiftCategory?, selectedId: Int) {
 
         guard let giftCategory = category else {
             return
