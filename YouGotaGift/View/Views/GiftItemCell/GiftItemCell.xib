@@ -12,31 +12,42 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GiftItemCell" id="gTV-IL-0wX" customClass="GiftItemCell" customModule="YouGotaGift" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="471" height="243"/>
+            <rect key="frame" x="0.0" y="0.0" width="471" height="364"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="471" height="243"/>
+                <rect key="frame" x="0.0" y="0.0" width="471" height="364"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYE-EZ-wIh">
-                        <rect key="frame" x="0.0" y="0.0" width="471" height="243"/>
+                        <rect key="frame" x="0.0" y="0.0" width="471" height="364"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pT3-FD-NPf">
-                                <rect key="frame" x="8" y="5" width="455" height="228"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pT3-FD-NPf">
+                                <rect key="frame" x="8" y="5" width="455" height="349"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkC-gF-5gG">
-                                        <rect key="frame" x="0.0" y="0.0" width="455" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="455" height="12"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H79-nn-O4F">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="12"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="redemption tag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUK-sf-aLv">
+                                                        <rect key="frame" x="2" y="0.5" width="56" height="11"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="EKv-iE-v1U"/>
+                                                    <constraint firstAttribute="trailing" secondItem="RUK-sf-aLv" secondAttribute="trailing" constant="2" id="3iL-ro-d1L"/>
+                                                    <constraint firstAttribute="width" constant="60" id="EKv-iE-v1U"/>
+                                                    <constraint firstItem="RUK-sf-aLv" firstAttribute="centerY" secondItem="H79-nn-O4F" secondAttribute="centerY" id="EmQ-eo-xk3"/>
+                                                    <constraint firstItem="RUK-sf-aLv" firstAttribute="leading" secondItem="H79-nn-O4F" secondAttribute="leading" constant="2" id="Qb4-rf-MKG"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-jN-7du">
-                                                <rect key="frame" x="432" y="4" width="21" height="12"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                <rect key="frame" x="435.5" y="1" width="17.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -48,24 +59,24 @@
                                             <constraint firstAttribute="trailing" secondItem="ggh-jN-7du" secondAttribute="trailing" constant="2" id="dJN-4m-R0x"/>
                                             <constraint firstItem="H79-nn-O4F" firstAttribute="top" secondItem="QkC-gF-5gG" secondAttribute="top" id="j0w-Hq-6t8"/>
                                             <constraint firstAttribute="bottom" secondItem="H79-nn-O4F" secondAttribute="bottom" id="tAg-oq-DK4"/>
-                                            <constraint firstAttribute="height" constant="20" id="vm8-nD-bgF"/>
+                                            <constraint firstAttribute="height" constant="12" id="vm8-nD-bgF"/>
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sS-04-szZ">
-                                        <rect key="frame" x="0.0" y="25" width="455" height="112"/>
+                                        <rect key="frame" x="0.0" y="15" width="455" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="112" id="yhO-kT-Tca"/>
+                                            <constraint firstAttribute="height" constant="100" id="yhO-kT-Tca"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="YouGotaGift Happy Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpj-Bf-VjW">
-                                        <rect key="frame" x="0.0" y="142" width="455" height="69"/>
+                                        <rect key="frame" x="0.0" y="118" width="455" height="214.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Card. All Brand | Online+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG7-ue-Sk5">
-                                        <rect key="frame" x="0.0" y="216" width="455" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <rect key="frame" x="0.0" y="335.5" width="455" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -90,16 +101,17 @@
                 <constraint firstItem="yYE-EZ-wIh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iWn-mR-3Bs"/>
                 <constraint firstItem="yYE-EZ-wIh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qU0-7f-6mO"/>
             </constraints>
-            <size key="customSize" width="471" height="233"/>
+            <size key="customSize" width="471" height="354"/>
             <connections>
                 <outlet property="currencyLabel" destination="ggh-jN-7du" id="f3e-dr-bke"/>
                 <outlet property="giftImage" destination="8sS-04-szZ" id="bnI-LQ-6yP"/>
                 <outlet property="nameLabel" destination="Wpj-Bf-VjW" id="uDQ-Ld-CtT"/>
+                <outlet property="redemptionTag" destination="RUK-sf-aLv" id="O3R-Qd-N02"/>
                 <outlet property="root" destination="yYE-EZ-wIh" id="vIB-HN-mb4"/>
                 <outlet property="taglineLabel" destination="uG7-ue-Sk5" id="eKo-gP-OKz"/>
                 <outlet property="topLeftView" destination="H79-nn-O4F" id="Ngb-tg-kFf"/>
             </connections>
-            <point key="canvasLocation" x="548.55072463768124" y="104.79910714285714"/>
+            <point key="canvasLocation" x="548.55072463768124" y="145.3125"/>
         </collectionViewCell>
     </objects>
     <resources>

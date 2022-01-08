@@ -38,12 +38,12 @@ class GiftHeaderView: UICollectionReusableView {
         }
         self.selectedCategory = selectedCategory
         self.giftCategories = categories
-        headerImage.alpha = 0.9
         if let categoryImageUrl = selectedCategory.imageLarge {
             headerImage.loadImageFromURL(urlString: categoryImageUrl)
         }
         headerTitle.text = selectedCategory.title ?? ""
         headerSubtitle.text = selectedCategory.caption ?? ""
+        categoryTitle.text = selectedCategory.name
         categoryCollection.reloadData()
     }
 }
@@ -57,7 +57,7 @@ extension GiftHeaderView: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = categoryCollection.dequeueReusableCell(
             withReuseIdentifier: "GiftCategoryCell", for: indexPath) as? GiftCategoryCell {
-            cell.setData(category: giftCategories?[indexPath.row])
+            cell.setData(category: giftCategories?[indexPath.row], selectedId: selectedCategory?.id ?? -1)
             return cell
         }
         return UICollectionViewCell()
@@ -70,7 +70,7 @@ extension GiftHeaderView: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let widthPerItem = categoryCollection.bounds.size.width/2.5
+        let widthPerItem = categoryCollection.bounds.size.width/2.6
         let heightPerItem = categoryCollection.bounds.size.height
         return CGSize(width: widthPerItem, height: heightPerItem)
     }
