@@ -101,17 +101,12 @@ class GiftDataModel {
         }
     }
 
-
     func categorySelected(categoryId: Int) {
         selectedCategoryId = categoryId
-
         if brandDict[categoryId] != nil {
             self.delegate?.dataChanged()
         } else {
             fetchGifts(categoryId: categoryId, page: 1)
         }
     }
-
-
-
 }

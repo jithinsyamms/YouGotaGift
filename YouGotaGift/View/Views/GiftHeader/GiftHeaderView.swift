@@ -69,7 +69,6 @@ extension GiftHeaderView: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(delegate)
         delegate?.categorySelected(categoryId: giftCategories?[indexPath.row].id ?? 0 )
     }
 }

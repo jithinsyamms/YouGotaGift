@@ -38,8 +38,7 @@ extension NetworkRequest {
                 return
             }
 
-            let str = String(decoding: data, as: UTF8.self)
-            print(str)
+           // let str = String(decoding: data, as: UTF8.self)
             guard let result = self.decode(data) else {
                 completion(.failure(NetworkError.decodeError))
                 return

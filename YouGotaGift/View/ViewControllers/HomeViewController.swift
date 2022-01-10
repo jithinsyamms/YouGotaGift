@@ -55,15 +55,12 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: GiftDataDelegate {
     func loadingStarted() {
-       print("loadingStarted")
     }
 
     func loadingFinished() {
-
     }
 
     func errorLoadingData() {
-        print("errorLoadingData")
     }
 
     func dataChanged() {

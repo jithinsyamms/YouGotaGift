@@ -36,6 +36,7 @@ struct GiftResource: APIResource {
         params.append(URLQueryItem(name: "api_key", value: "2vq1M9ye4eV6H1Mr"))
         params.append(URLQueryItem(name: "api_secret", value: "wnRY14QoA99B4Ae6wn2CU2y8"))
         if categoryId > 0 {
+            print("category = \(categoryId) page = \(page)")
             params.append(URLQueryItem(name: "category", value: String(categoryId)))
             params.append(URLQueryItem(name: "page", value: String(page)))
         }

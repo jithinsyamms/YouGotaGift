@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,6 +25,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="257" height="71"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vc9-2F-0DO">
+                                <rect key="frame" x="0.0" y="0.0" width="257" height="71"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw8-9f-4o6">
                                 <rect key="frame" x="78.5" y="27.5" width="100.5" height="16"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -40,12 +45,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vc9-2F-0DO" firstAttribute="top" secondItem="CVz-0V-0bl" secondAttribute="top" id="5Td-Rp-TmK"/>
                             <constraint firstAttribute="bottom" secondItem="o9R-ki-j8P" secondAttribute="bottom" id="720-kW-4sJ"/>
                             <constraint firstItem="X6P-yQ-ZPJ" firstAttribute="centerX" secondItem="CVz-0V-0bl" secondAttribute="centerX" id="7tq-ee-cMG"/>
                             <constraint firstItem="o9R-ki-j8P" firstAttribute="leading" secondItem="CVz-0V-0bl" secondAttribute="leading" id="Nxz-3k-aNK"/>
                             <constraint firstItem="X6P-yQ-ZPJ" firstAttribute="top" secondItem="CVz-0V-0bl" secondAttribute="top" constant="-5" id="Pyt-0M-vHn"/>
+                            <constraint firstAttribute="trailing" secondItem="vc9-2F-0DO" secondAttribute="trailing" id="V71-Xx-X7r"/>
                             <constraint firstItem="Jw8-9f-4o6" firstAttribute="centerY" secondItem="CVz-0V-0bl" secondAttribute="centerY" id="V8k-uf-r53"/>
                             <constraint firstItem="Jw8-9f-4o6" firstAttribute="centerX" secondItem="CVz-0V-0bl" secondAttribute="centerX" id="oNO-lT-LBi"/>
+                            <constraint firstAttribute="bottom" secondItem="vc9-2F-0DO" secondAttribute="bottom" id="odP-TK-reo"/>
+                            <constraint firstItem="vc9-2F-0DO" firstAttribute="leading" secondItem="CVz-0V-0bl" secondAttribute="leading" id="rlc-jz-Nt8"/>
                             <constraint firstAttribute="trailing" secondItem="o9R-ki-j8P" secondAttribute="trailing" id="vyr-tu-t6A"/>
                             <constraint firstItem="o9R-ki-j8P" firstAttribute="top" secondItem="CVz-0V-0bl" secondAttribute="top" id="xaQ-6n-XYE"/>
                         </constraints>
@@ -64,6 +73,7 @@
             <connections>
                 <outlet property="categoryImage" destination="o9R-ki-j8P" id="dvS-gd-5ri"/>
                 <outlet property="categotyTitle" destination="Jw8-9f-4o6" id="MoK-um-tbp"/>
+                <outlet property="overlayView" destination="vc9-2F-0DO" id="abI-5y-fAT"/>
                 <outlet property="rootView" destination="CVz-0V-0bl" id="a9X-LG-27X"/>
                 <outlet property="selectedImage" destination="X6P-yQ-ZPJ" id="06I-b3-bea"/>
             </connections>
@@ -72,5 +82,8 @@
     </objects>
     <resources>
         <image name="selectedLatest" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
