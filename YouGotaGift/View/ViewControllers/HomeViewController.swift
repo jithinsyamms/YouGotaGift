@@ -148,7 +148,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        return CGSize(width: widthPerItem, height: 180)
     }
 
     func collectionView( _ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
