@@ -9,7 +9,6 @@ import Foundation
 
 protocol GiftDataDelegate: AnyObject {
     func loadingStarted(showIndicator: Bool)
-    func loadingFinished()
     func errorLoadingData()
     func dataChanged()
 }
@@ -32,19 +31,19 @@ class GiftDataModel {
         let giftResoucrce = GiftResource(category: categoryId, page: page, url: url)
         let giftRequest = GiftRequest(resource: giftResoucrce)
         self.delegate?.loadingStarted(showIndicator: url.isEmpty ? true : false)
+
         giftRequest.execute { result in
             switch result {
             case .success(let giftData):
                 self.giftData = giftData
                 self.setUpData()
-                self.delegate?.dataChanged()
+                DispatchQueue.main.async {
+                    self.delegate?.dataChanged()
+                }
             case .failure:
                 DispatchQueue.main.async {
                     self.delegate?.errorLoadingData()
                 }
-            }
-            DispatchQueue.main.async {
-                self.delegate?.loadingFinished()
             }
         }
     }

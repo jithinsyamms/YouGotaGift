@@ -71,15 +71,13 @@ extension HomeViewController: GiftDataDelegate {
             activityIndicator.startAnimating()
         }
         view.isUserInteractionEnabled = false
-    }
 
-    func loadingFinished() {
     }
-
     func errorLoadingData() {
-        
-    }
+        activityIndicator.stopAnimating()
+        view.isUserInteractionEnabled = true
 
+    }
     func dataChanged() {
         giftBrands = giftDataModel.getGiftBrands()
         giftCategories = giftDataModel.getCategories()
