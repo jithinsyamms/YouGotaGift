@@ -62,6 +62,9 @@ class GiftDataModel {
         if let brands = giftData.brands {
             addBrandsToCategories(brands: brands, categoryID: selectedCategoryId)
         }
+        if let pageData = giftData.paginatedData {
+            paginatedData[selectedCategoryId] = pageData
+        }
     }
 
     func addBrandsToCategories(brands: [GiftBrand], categoryID: Int) {
