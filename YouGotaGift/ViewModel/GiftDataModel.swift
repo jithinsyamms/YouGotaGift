@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GiftDataDelegate: AnyObject {
-    func loadingStarted()
+    func loadingStarted(showIndicator: Bool)
     func loadingFinished()
     func errorLoadingData()
     func dataChanged()
@@ -25,13 +25,13 @@ class GiftDataModel {
     var paginatedData: [Int: PaginatedData] = [:]
     var selectedCategoryId: Int  = -1
 
-    func fetchGifts(categoryId: Int = 0, page: Int = 1) {
+    func fetchGifts(categoryId: Int = -1, page: Int = 1, url: String = "") {
         guard !isLoading else {
             return
         }
-        let giftResoucrce = GiftResource(category: categoryId, page: page)
+        let giftResoucrce = GiftResource(category: categoryId, page: page, url: url)
         let giftRequest = GiftRequest(resource: giftResoucrce)
-        self.delegate?.loadingStarted()
+        self.delegate?.loadingStarted(showIndicator: url.isEmpty ? true : false)
         giftRequest.execute { result in
             switch result {
             case .success(let giftData):
@@ -101,6 +101,20 @@ class GiftDataModel {
     func getSelectedCategory() -> GiftCategory? {
         return giftCategories.first { category in
             category.id == selectedCategoryId
+        }
+    }
+
+    func hasNextUrl() -> Bool {
+        if let pageData = paginatedData[selectedCategoryId], let nextUrl = pageData.next, nextUrl.count > 0 {
+          return true
+        }
+        return false
+    }
+
+    func fetchMore() {
+        if let data = paginatedData[selectedCategoryId],
+           let nextUrl = data.next, nextUrl.count > 0 {
+            fetchGifts(categoryId: -1, page: 0, url: nextUrl)
         }
     }
 

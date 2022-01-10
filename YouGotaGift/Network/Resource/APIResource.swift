@@ -15,6 +15,7 @@ protocol APIResource {
     var method: String {get}
     var parameters: [URLQueryItem] {get}
     var headers: [URLQueryItem] {get}
+    var URL: URL? {get}
 }
 
 extension APIResource {

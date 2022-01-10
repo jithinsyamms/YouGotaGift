@@ -36,12 +36,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setActivityIndicator()
         setNavigationBar()
+
         collectionView.register(UINib(nibName: "GiftItemCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         collectionView.register(UINib(nibName: "GiftHeaderView", bundle: nil),
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
         collectionView.register(UINib(nibName: "GiftFooterView", bundle: nil),
-                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                                 withReuseIdentifier: footerIdentifier)
 
         giftDataModel.delegate = self
@@ -64,8 +65,11 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: GiftDataDelegate {
-    func loadingStarted() {
-        activityIndicator.startAnimating()
+
+    func loadingStarted(showIndicator: Bool) {
+        if showIndicator {
+            activityIndicator.startAnimating()
+        }
         view.isUserInteractionEnabled = false
     }
 
@@ -73,6 +77,7 @@ extension HomeViewController: GiftDataDelegate {
     }
 
     func errorLoadingData() {
+        
     }
 
     func dataChanged() {
@@ -122,9 +127,17 @@ extension HomeViewController: UICollectionViewDataSource {
                 ofKind: kind, withReuseIdentifier: footerIdentifier, for: indexPath) as? GiftFooterView {
                 reusableView = footerView
                 collectionFooterView = footerView
+
             }
         }
         return reusableView
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        if let giftBrands = giftBrands, indexPath.row == giftBrands.count - 1 {
+            giftDataModel.fetchMore()
+        }
     }
 
 }
@@ -156,11 +169,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.55)
     }
 
-    func collectionView(_ collectionView: UICollectionView,
-                        layoutcollectionViewLayout: UICollectionViewLayout,
-                        referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 30)
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: giftDataModel.hasNextUrl() ? 50: 0)
     }
+
 }
 
 extension HomeViewController: CategoryProtocol {
