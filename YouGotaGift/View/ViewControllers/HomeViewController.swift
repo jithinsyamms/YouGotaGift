@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     let headerIdentifier = "GiftHeaderView"
     let footerIdentifier = "GiftFooterView"
 
+    var activityIndicator = UIActivityIndicatorView()
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(
         top: 20.0,
@@ -33,6 +34,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setActivityIndicator()
         setNavigationBar()
         collectionView.register(UINib(nibName: "GiftItemCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         collectionView.register(UINib(nibName: "GiftHeaderView", bundle: nil),
@@ -46,15 +48,25 @@ class HomeViewController: UIViewController {
         giftDataModel.fetchGifts()
     }
 
+    func setActivityIndicator() {
+        activityIndicator.center = view.center
+        activityIndicator.style = .large
+        activityIndicator.color = UIColor.systemPink
+        view.addSubview(activityIndicator)
+    }
+
     func setNavigationBar() {
         let logo = UIImage(named: "Icon-29")
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
+        activityIndicator.hidesWhenStopped = true
     }
 }
 
 extension HomeViewController: GiftDataDelegate {
     func loadingStarted() {
+        activityIndicator.startAnimating()
+        view.isUserInteractionEnabled = false
     }
 
     func loadingFinished() {
@@ -68,6 +80,8 @@ extension HomeViewController: GiftDataDelegate {
         giftCategories = giftDataModel.getCategories()
         selectedCategory = giftDataModel.getSelectedCategory()
         self.collectionView.reloadData()
+        activityIndicator.stopAnimating()
+        view.isUserInteractionEnabled = true
     }
 }
 
