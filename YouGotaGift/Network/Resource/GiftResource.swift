@@ -11,6 +11,13 @@ struct GiftResource: APIResource {
 
     typealias Model = GiftData
 
+    var categoryId: Int
+    var page: Int
+
+    init(category: Int, page: Int) {
+        self.categoryId = category
+        self.page = page
+    }
     var scheme: String {
         "https"
     }
@@ -28,6 +35,10 @@ struct GiftResource: APIResource {
         var params: [URLQueryItem] = []
         params.append(URLQueryItem(name: "api_key", value: "2vq1M9ye4eV6H1Mr"))
         params.append(URLQueryItem(name: "api_secret", value: "wnRY14QoA99B4Ae6wn2CU2y8"))
+        if categoryId > 0 {
+            params.append(URLQueryItem(name: "category", value: String(categoryId)))
+            params.append(URLQueryItem(name: "page", value: String(page)))
+        }
         return params
     }
 

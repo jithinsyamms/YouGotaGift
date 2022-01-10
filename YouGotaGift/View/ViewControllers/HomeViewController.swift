@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
 
     private var giftBrands: [GiftBrand]?
     private var giftCategories: [GiftCategory]?
+    private var selectedCategory: GiftCategory?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,15 +59,19 @@ extension HomeViewController: GiftDataDelegate {
     }
 
     func loadingFinished() {
-        giftBrands = giftDataModel.getGiftBrands()
-        giftCategories = giftDataModel.getCategories()
-        self.collectionView.reloadData()
+
     }
 
     func errorLoadingData() {
         print("errorLoadingData")
     }
 
+    func dataChanged() {
+        giftBrands = giftDataModel.getGiftBrands()
+        giftCategories = giftDataModel.getCategories()
+        selectedCategory = giftDataModel.getSelectedCategory()
+        self.collectionView.reloadData()
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -97,7 +102,8 @@ extension HomeViewController: UICollectionViewDataSource {
                                 for: indexPath) as? GiftHeaderView {
                 reusableView = headerView
                 collectionHeaderView = headerView
-                collectionHeaderView.setData(categories: giftCategories, selectedCategory: giftCategories?[0])
+                collectionHeaderView.delegate = self
+                collectionHeaderView.setData(categories: giftCategories, selectedCategory: selectedCategory)
 
             }
         } else if kind == UICollectionView.elementKindSectionFooter {

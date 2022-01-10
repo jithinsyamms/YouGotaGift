@@ -11,6 +11,7 @@ protocol GiftDataDelegate: AnyObject {
     func loadingStarted()
     func loadingFinished()
     func errorLoadingData()
+    func dataChanged()
 }
 
 class GiftDataModel {
@@ -24,19 +25,19 @@ class GiftDataModel {
     var paginatedData: [Int: PaginatedData] = [:]
     var selectedCategoryId: Int  = -1
 
-    func fetchGifts() {
+    func fetchGifts(categoryId: Int = 0, page: Int = 1) {
         guard !isLoading else {
             return
         }
-
-        let giftResoucrce = GiftResource()
+        let giftResoucrce = GiftResource(category: categoryId, page: page)
         let giftRequest = GiftRequest(resource: giftResoucrce)
         self.delegate?.loadingStarted()
         giftRequest.execute { result in
             switch result {
             case .success(let giftData):
                 self.giftData = giftData
-                print("success")
+                self.setUpData()
+                self.delegate?.dataChanged()
             case .failure:
                 DispatchQueue.main.async {
                     self.delegate?.errorLoadingData()
@@ -48,37 +49,69 @@ class GiftDataModel {
         }
     }
 
-    func categorySelected(categoryId: Int) {
-       
+    func setUpData() {
+        guard let giftData = giftData else {
+            return
+        }
+        if let selectedCategory = giftData.selectedCategory {
+            selectedCategoryId = selectedCategory.id
+        }
+        if let categories = giftData.categories {
+            giftCategories = categories
+        }
+        if let brands = giftData.brands {
+            addBrandsToCategories(brands: brands, categoryID: selectedCategoryId)
+        }
+    }
+
+    func addBrandsToCategories(brands: [GiftBrand], categoryID: Int) {
+        if var brandArray = brandDict[categoryID] {
+            brandArray.append(contentsOf: brands)
+            brandDict[categoryID] = brandArray
+        } else {
+            brandDict[categoryID] = brands
+        }
     }
 
     func getCategotyCount() -> Int {
-        if let giftData = giftData {
-            return giftData.categories?.count ?? 0
-        }
-        return 0
-
+        giftCategories.count
     }
 
     func getGiftBrandsCount() -> Int {
-        if let giftData = giftData {
-            return giftData.brands?.count ?? 0
+        if let giftBrands = brandDict[selectedCategoryId] {
+            return giftBrands.count
         }
         return 0
     }
 
     func getCategories() -> [GiftCategory] {
-        if let giftData = giftData, let categories = giftData.categories {
-            return categories
-        }
-        return []
+        return giftCategories
     }
 
     func getGiftBrands() -> [GiftBrand] {
-        if let giftData = giftData, let giftBrands = giftData.brands {
+        if let giftBrands = brandDict[selectedCategoryId] {
             return giftBrands
         }
         return []
     }
+
+    func getSelectedCategory() -> GiftCategory? {
+        return giftCategories.first { category in
+            category.id == selectedCategoryId
+        }
+    }
+
+
+    func categorySelected(categoryId: Int) {
+        selectedCategoryId = categoryId
+
+        if brandDict[categoryId] != nil {
+            self.delegate?.dataChanged()
+        } else {
+            fetchGifts(categoryId: categoryId, page: 1)
+        }
+    }
+
+
 
 }

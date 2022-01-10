@@ -24,8 +24,6 @@ class GiftCategoryCell: UICollectionViewCell {
         }
         selectedImage.alpha = giftCategory.id == selectedId ? 1.0 : 0
         rootView.layer.cornerRadius = 8
-        rootView.layer.borderWidth = 0.2
-        rootView.layer.borderColor = UIColor.lightGray.cgColor
         categoryImage.layer.cornerRadius = 8
         categoryImage.clipsToBounds = true
         categotyTitle.text = giftCategory.name
