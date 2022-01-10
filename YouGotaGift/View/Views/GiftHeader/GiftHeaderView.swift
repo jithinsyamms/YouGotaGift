@@ -13,6 +13,7 @@ protocol CategoryProtocol: AnyObject {
 
 class GiftHeaderView: UICollectionReusableView {
 
+    @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var headerSubtitle: UILabel!
@@ -46,6 +47,8 @@ class GiftHeaderView: UICollectionReusableView {
         if let categoryImageUrl = selectedCategory.imageLarge {
             headerImage.loadImageFromURL(urlString: categoryImageUrl)
         }
+        overlayView.backgroundColor = UIColor.black
+        overlayView.alpha = 0.25
         headerTitle.text = selectedCategory.title ?? ""
         headerSubtitle.text = selectedCategory.caption ?? ""
         categoryTitle.text = selectedCategory.name

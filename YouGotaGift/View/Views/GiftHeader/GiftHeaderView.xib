@@ -18,30 +18,38 @@
                     <rect key="frame" x="0.0" y="0.0" width="396" height="389"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ij1-EN-ey9" userLabel="headerView">
-                            <rect key="frame" x="0.0" y="0.0" width="396" height="253"/>
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="233.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-bA-4gk">
-                                    <rect key="frame" x="0.0" y="0.0" width="396" height="253"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="396" height="233.5"/>
                                 </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIz-px-2Uq">
+                                    <rect key="frame" x="0.0" y="0.0" width="396" height="233.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send eGift Cards from home" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nh-39g">
-                                    <rect key="frame" x="76.5" y="116" width="243.5" height="21"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <rect key="frame" x="70" y="105" width="256" height="23"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital Gift Cards delivered by Email or SMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-By-hXB">
-                                    <rect key="frame" x="49" y="142" width="298.5" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <rect key="frame" x="32.5" y="133" width="331" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="TIz-px-2Uq" firstAttribute="top" secondItem="JAU-bA-4gk" secondAttribute="top" id="1Op-lv-hzY"/>
                                 <constraint firstItem="FE2-By-hXB" firstAttribute="top" secondItem="gdx-nh-39g" secondAttribute="bottom" constant="5" id="UJD-Hg-tKU"/>
+                                <constraint firstItem="TIz-px-2Uq" firstAttribute="bottom" secondItem="JAU-bA-4gk" secondAttribute="bottom" id="YVd-CL-Lww"/>
                                 <constraint firstItem="gdx-nh-39g" firstAttribute="centerY" secondItem="Ij1-EN-ey9" secondAttribute="centerY" id="bEl-vc-dOd"/>
                                 <constraint firstItem="JAU-bA-4gk" firstAttribute="leading" secondItem="Ij1-EN-ey9" secondAttribute="leading" id="d3d-h5-iYy"/>
+                                <constraint firstItem="TIz-px-2Uq" firstAttribute="leading" secondItem="JAU-bA-4gk" secondAttribute="leading" id="dBc-hf-3EG"/>
                                 <constraint firstAttribute="bottom" secondItem="JAU-bA-4gk" secondAttribute="bottom" id="eKd-CJ-DLR"/>
+                                <constraint firstItem="TIz-px-2Uq" firstAttribute="trailing" secondItem="JAU-bA-4gk" secondAttribute="trailing" id="fj5-BT-r1S"/>
                                 <constraint firstItem="JAU-bA-4gk" firstAttribute="top" secondItem="Ij1-EN-ey9" secondAttribute="top" id="h18-Dv-fhb"/>
                                 <constraint firstItem="gdx-nh-39g" firstAttribute="centerX" secondItem="Ij1-EN-ey9" secondAttribute="centerX" id="l7U-yf-ati"/>
                                 <constraint firstItem="FE2-By-hXB" firstAttribute="centerX" secondItem="Ij1-EN-ey9" secondAttribute="centerX" id="qMp-IE-9dg"/>
@@ -49,7 +57,7 @@
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="azO-2G-qqH">
-                            <rect key="frame" x="0.0" y="263" width="396" height="77.5"/>
+                            <rect key="frame" x="0.0" y="243.5" width="396" height="85.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iwb-43-H3b">
                                 <size key="itemSize" width="128" height="128"/>
@@ -63,7 +71,8 @@
                             </connections>
                         </collectionView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-Ap-eHw">
-                            <rect key="frame" x="198" y="345.5" width="0.0" height="58.5"/>
+                            <rect key="frame" x="198" y="334" width="0.0" height="70"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -71,17 +80,17 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="azO-2G-qqH" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.2" id="A91-5E-JEc"/>
+                        <constraint firstItem="azO-2G-qqH" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.22" id="A91-5E-JEc"/>
                         <constraint firstAttribute="trailing" secondItem="azO-2G-qqH" secondAttribute="trailing" id="H0a-pk-Hyy"/>
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="top" secondItem="azO-2G-qqH" secondAttribute="bottom" constant="5" id="H1r-Kh-KRz"/>
                         <constraint firstAttribute="trailing" secondItem="Ij1-EN-ey9" secondAttribute="trailing" id="MvA-m9-Nfy"/>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" id="NYW-Sc-4JR"/>
-                        <constraint firstItem="Bk3-Ap-eHw" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.15" id="bOg-w0-GK3"/>
+                        <constraint firstItem="Bk3-Ap-eHw" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.18" id="bOg-w0-GK3"/>
                         <constraint firstItem="Ij1-EN-ey9" firstAttribute="top" secondItem="aRL-EW-MaK" secondAttribute="top" id="fq3-FP-i4t"/>
                         <constraint firstItem="Bk3-Ap-eHw" firstAttribute="centerX" secondItem="aRL-EW-MaK" secondAttribute="centerX" id="s21-v2-AgU"/>
                         <constraint firstItem="azO-2G-qqH" firstAttribute="top" secondItem="Ij1-EN-ey9" secondAttribute="bottom" constant="10" id="s7p-oA-l7O"/>
                         <constraint firstItem="Ij1-EN-ey9" firstAttribute="leading" secondItem="aRL-EW-MaK" secondAttribute="leading" id="uLg-cz-ko1"/>
-                        <constraint firstItem="Ij1-EN-ey9" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.65" id="xUX-in-KP7"/>
+                        <constraint firstItem="Ij1-EN-ey9" firstAttribute="height" secondItem="aRL-EW-MaK" secondAttribute="height" multiplier="0.6" id="xUX-in-KP7"/>
                     </constraints>
                 </view>
             </subviews>
@@ -102,6 +111,7 @@
                 <outlet property="headerImage" destination="JAU-bA-4gk" id="Icm-gR-DXt"/>
                 <outlet property="headerSubtitle" destination="FE2-By-hXB" id="Lam-GE-RQ1"/>
                 <outlet property="headerTitle" destination="gdx-nh-39g" id="LgH-p7-JYw"/>
+                <outlet property="overlayView" destination="TIz-px-2Uq" id="Lz2-HM-KrW"/>
             </connections>
             <point key="canvasLocation" x="65.217391304347828" y="164.39732142857142"/>
         </collectionReusableView>
