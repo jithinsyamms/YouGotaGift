@@ -22,22 +22,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="541"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkC-gF-5gG">
-                                <rect key="frame" x="8" y="4" width="552" height="14"/>
+                                <rect key="frame" x="8" y="4" width="552" height="16"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H79-nn-O4F">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="16"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="redemption tag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUK-sf-aLv">
-                                                <rect key="frame" x="2" y="1.5" width="46" height="11"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="2" y="2.5" width="56" height="11"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="RUK-sf-aLv" secondAttribute="trailing" constant="2" id="3iL-ro-d1L"/>
-                                            <constraint firstAttribute="width" constant="50" id="EKv-iE-v1U">
+                                            <constraint firstAttribute="width" constant="60" id="EKv-iE-v1U">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="80"/>
                                             </constraint>
                                             <constraint firstItem="RUK-sf-aLv" firstAttribute="centerY" secondItem="H79-nn-O4F" secondAttribute="centerY" id="EmQ-eo-xk3"/>
@@ -45,7 +45,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-jN-7du">
-                                        <rect key="frame" x="530.5" y="1.5" width="19.5" height="11"/>
+                                        <rect key="frame" x="530.5" y="2.5" width="19.5" height="11"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -61,13 +61,13 @@
                                     <constraint firstAttribute="trailing" secondItem="ggh-jN-7du" secondAttribute="trailing" constant="2" id="dJN-4m-R0x"/>
                                     <constraint firstItem="H79-nn-O4F" firstAttribute="top" secondItem="QkC-gF-5gG" secondAttribute="top" id="j0w-Hq-6t8"/>
                                     <constraint firstAttribute="bottom" secondItem="H79-nn-O4F" secondAttribute="bottom" id="tAg-oq-DK4"/>
-                                    <constraint firstAttribute="height" constant="14" id="vm8-nD-bgF">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="18"/>
+                                    <constraint firstAttribute="height" constant="16" id="vm8-nD-bgF">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                     </constraint>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sS-04-szZ">
-                                <rect key="frame" x="8" y="23" width="552" height="473.5"/>
+                                <rect key="frame" x="8" y="25" width="552" height="471.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="YouGotaGift Happy Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpj-Bf-VjW">
                                 <rect key="frame" x="8" y="501.5" width="552" height="18"/>
@@ -130,9 +130,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

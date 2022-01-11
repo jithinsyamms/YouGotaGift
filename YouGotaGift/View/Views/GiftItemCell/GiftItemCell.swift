@@ -33,12 +33,15 @@ class GiftItemCell: UICollectionViewCell {
         root.layer.borderColor = UIColor.lightGray.cgColor
         root.layer.borderWidth = 0.5
         topLeftView.layer.cornerRadius = 6
+        topLeftView.layer.borderColor = UIColor.purple.cgColor
+        topLeftView.layer.borderWidth = 0.6
         if let tag = giftBrand.redemptionTag, tag.count > 0 {
             topLeftView.alpha = 1
         } else {
             topLeftView.alpha = 0
         }
         redemptionTag.text = giftBrand.redemptionTag
+        redemptionTag.textColor = UIColor.purple
         giftImage.layer.cornerRadius = 10
 
         nameLabel.text = giftBrand.name
