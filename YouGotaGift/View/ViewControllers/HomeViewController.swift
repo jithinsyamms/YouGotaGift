@@ -17,9 +17,9 @@ class HomeViewController: UIViewController {
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(
         top: 10.0,
-        left: 15.0,
+        left: 12.0,
         bottom: 10.0,
-        right: 15.0)
+        right: 12.0)
 
     var collectionHeaderView: GiftHeaderView!
     var collectionFooterView: GiftFooterView!
