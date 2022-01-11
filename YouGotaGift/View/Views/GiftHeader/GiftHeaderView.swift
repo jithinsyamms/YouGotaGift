@@ -31,6 +31,8 @@ class GiftHeaderView: UICollectionReusableView {
     private var selectedCategory: GiftCategory?
     weak var delegate: CategoryProtocol?
 
+    var selectedIndexpath: IndexPath?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         categoryCollection.register(UINib(nibName: "GiftCategoryCell",
@@ -53,6 +55,10 @@ class GiftHeaderView: UICollectionReusableView {
         headerSubtitle.text = selectedCategory.caption ?? ""
         categoryTitle.text = selectedCategory.name
         categoryCollection.reloadData()
+        if let indexPath = selectedIndexpath {
+            categoryCollection.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+
     }
 }
 
@@ -72,6 +78,7 @@ extension GiftHeaderView: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndexpath = indexPath
         delegate?.categorySelected(categoryId: giftCategories?[indexPath.row].id ?? 0 )
     }
 }
