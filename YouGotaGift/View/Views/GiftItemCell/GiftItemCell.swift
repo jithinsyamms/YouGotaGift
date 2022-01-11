@@ -31,7 +31,7 @@ class GiftItemCell: UICollectionViewCell {
         }
         root.layer.cornerRadius = 10
         root.layer.borderColor = UIColor.lightGray.cgColor
-        root.layer.borderWidth = 0.3
+        root.layer.borderWidth = 0.5
         topLeftView.layer.cornerRadius = 6
         if let tag = giftBrand.redemptionTag, tag.count > 0 {
             topLeftView.alpha = 1
