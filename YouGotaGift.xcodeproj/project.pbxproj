@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D7782B7278C52B100A11F56 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7782B6278C52B100A11F56 /* UIColor+Extension.swift */; };
+		5D4A5436278D9D7A00740E7C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5435278D9D7A00740E7C /* Utils.swift */; };
 		5D9DA6D82789630E0021E50C /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D72789630E0021E50C /* GiftData.swift */; };
 		5D9DA6DA278968710021E50C /* GiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D9278968710021E50C /* GiftDataModel.swift */; };
 		5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA22786FA0400056B85 /* AppDelegate.swift */; };
@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D7782B6278C52B100A11F56 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5D4A5435278D9D7A00740E7C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5D9DA6D72789630E0021E50C /* GiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
 		5D9DA6D9278968710021E50C /* GiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDataModel.swift; sourceTree = "<group>"; };
 		5DC9DC9F2786FA0400056B85 /* YouGotaGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGotaGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,7 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				5DC9DD05278764E800056B85 /* ImageView+Extension.swift */,
-				5D7782B6278C52B100A11F56 /* UIColor+Extension.swift */,
+				5D4A5435278D9D7A00740E7C /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -461,13 +461,13 @@
 				5DC9DCEE27870EC500056B85 /* Constants.swift in Sources */,
 				5DC9DCEB27870E7D00056B85 /* GiftResource.swift in Sources */,
 				5D9DA6DA278968710021E50C /* GiftDataModel.swift in Sources */,
-				5D7782B7278C52B100A11F56 /* UIColor+Extension.swift in Sources */,
 				5DC9DD0227874CE300056B85 /* GiftFooterView.swift in Sources */,
 				5DC9DCFE27874CC300056B85 /* GiftHeaderView.swift in Sources */,
 				5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */,
 				5DC9DCA52786FA0400056B85 /* SceneDelegate.swift in Sources */,
 				5DC9DCE927870E3100056B85 /* NetworkError.swift in Sources */,
 				5DC9DCFA27874C8800056B85 /* GiftItemCell.swift in Sources */,
+				5D4A5436278D9D7A00740E7C /* Utils.swift in Sources */,
 				5DC9DD102788105A00056B85 /* GiftCategoryCell.swift in Sources */,
 				5DC9DCE727870E0600056B85 /* APIResource.swift in Sources */,
 				5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */,

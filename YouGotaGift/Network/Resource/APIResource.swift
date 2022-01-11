@@ -19,6 +19,7 @@ protocol APIResource {
 }
 
 extension APIResource {
+
     var URL: URL? {
         var components = URLComponents()
         components.scheme = scheme
@@ -29,6 +30,9 @@ extension APIResource {
     }
     var scheme: String {
         "https"
+    }
+    var method: String {
+        "GET"
     }
     var parameters: [URLQueryItem] {
         return []

@@ -17,6 +17,7 @@ struct GiftRequest<Resource: APIResource> {
 extension GiftRequest: NetworkRequest {
 
     typealias Model = Resource.Model
+
     func decode(_ data: Data) -> Model? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .millisecondsSince1970

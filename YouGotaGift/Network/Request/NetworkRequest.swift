@@ -17,7 +17,6 @@ extension NetworkRequest {
 
     func load<Resource: APIResource>( resource: Resource,
                                       withCompletion completion: @escaping (Result<Model?, Error>) -> Void) {
-
         guard let url = resource.URL else {
             completion(.failure(NetworkError.invalidURL))
             return
@@ -37,8 +36,6 @@ extension NetworkRequest {
                 completion(.failure(NetworkError.serverError))
                 return
             }
-
-           // let str = String(decoding: data, as: UTF8.self)
             guard let result = self.decode(data) else {
                 completion(.failure(NetworkError.decodeError))
                 return
