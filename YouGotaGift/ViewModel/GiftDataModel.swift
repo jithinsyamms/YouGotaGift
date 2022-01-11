@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Network
 
 protocol GiftDataDelegate: AnyObject {
     func loadingStarted(showIndicator: Bool)
     func errorLoadingData()
     func dataChanged()
+    func networkStatusChanged()
 }
 
 class GiftDataModel {
@@ -18,23 +20,53 @@ class GiftDataModel {
     var giftData: GiftData?
     weak var delegate: GiftDataDelegate?
     var isLoading: Bool = false
+    var loadedDataOnce = false
 
     var giftCategories: [GiftCategory] = []
     var brandDict: [Int: [GiftBrand]] = [:]
     var paginatedData: [Int: PaginatedData] = [:]
     var selectedCategoryId: Int  = -1
+    var isNetworkAvailable = false
+
+    let monitor = NWPathMonitor()
+    init() {
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                self.isNetworkAvailable = true
+                if !self.loadedDataOnce {
+                    DispatchQueue.main.async {
+                        self.fetchGifts()
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.delegate?.networkStatusChanged()
+                    }
+                }
+
+            } else {
+                self.isNetworkAvailable = false
+                DispatchQueue.main.async {
+                    self.delegate?.networkStatusChanged()
+                }
+            }
+        }
+        monitor.start(queue: .global())
+    }
 
     func fetchGifts(categoryId: Int = -1, page: Int = 1, url: String = "") {
         guard !isLoading else {
             return
         }
+        isLoading = true
         let giftResoucrce = GiftResource(category: categoryId, page: page, url: url)
         let giftRequest = GiftRequest(resource: giftResoucrce)
         self.delegate?.loadingStarted(showIndicator: url.isEmpty ? true : false)
 
         giftRequest.execute { result in
+            self.isLoading = false
             switch result {
             case .success(let giftData):
+                self.loadedDataOnce = true
                 self.giftData = giftData
                 self.setUpData()
                 DispatchQueue.main.async {
@@ -102,7 +134,6 @@ class GiftDataModel {
             category.id == selectedCategoryId
         }
     }
-
     func hasNextUrl() -> Bool {
         if let pageData = paginatedData[selectedCategoryId], let nextUrl = pageData.next, nextUrl.count > 0 {
           return true
@@ -111,6 +142,9 @@ class GiftDataModel {
     }
 
     func fetchMore() {
+        guard isNetworkAvailable else {
+            return
+        }
         if let data = paginatedData[selectedCategoryId],
            let nextUrl = data.next, nextUrl.count > 0 {
             fetchGifts(categoryId: -1, page: 0, url: nextUrl)

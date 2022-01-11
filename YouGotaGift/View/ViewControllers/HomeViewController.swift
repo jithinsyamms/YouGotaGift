@@ -67,12 +67,13 @@ class HomeViewController: UIViewController {
 extension HomeViewController: GiftDataDelegate {
 
     func loadingStarted(showIndicator: Bool) {
+        self.collectionView.backgroundView = nil
         if showIndicator {
-            activityIndicator.startAnimating()
+            self.activityIndicator.startAnimating()
         }
-        view.isUserInteractionEnabled = false
-
+        self.view.isUserInteractionEnabled = false
     }
+
     func errorLoadingData() {
         activityIndicator.stopAnimating()
         view.isUserInteractionEnabled = true
@@ -82,8 +83,9 @@ extension HomeViewController: GiftDataDelegate {
         } else {
             collectionView.backgroundView = nil
         }
-
+        collectionView.reloadData()
     }
+
     func dataChanged() {
         giftBrands = giftDataModel.getGiftBrands()
         giftCategories = giftDataModel.getCategories()
@@ -91,6 +93,9 @@ extension HomeViewController: GiftDataDelegate {
         self.collectionView.reloadData()
         activityIndicator.stopAnimating()
         view.isUserInteractionEnabled = true
+    }
+    func networkStatusChanged() {
+        collectionView.reloadData()
     }
 }
 
@@ -187,7 +192,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: giftDataModel.hasNextUrl() ? 50: 0)
+        return CGSize(width: collectionView.frame.width,
+                      height: giftDataModel.hasNextUrl() && giftDataModel.isNetworkAvailable ? 50: 0)
     }
 
 }
