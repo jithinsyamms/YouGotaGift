@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5D4A5436278D9D7A00740E7C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5435278D9D7A00740E7C /* Utils.swift */; };
+		5D4A5448278DC2A900740E7C /* YouGotaGiftURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5447278DC2A900740E7C /* YouGotaGiftURLTests.swift */; };
+		5D4A544A278DC7CE00740E7C /* YouGotaGiftNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5449278DC7CE00740E7C /* YouGotaGiftNetworkTest.swift */; };
+		5D4A544C278DCBB200740E7C /* InvalidGiftRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A544B278DCBB200740E7C /* InvalidGiftRequestTest.swift */; };
+		5D4A544E278DCEA400740E7C /* gifts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A544D278DCEA400740E7C /* gifts.json */; };
+		5D4A5452278DCEFC00740E7C /* YouGotaGiftParseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5451278DCEFC00740E7C /* YouGotaGiftParseTest.swift */; };
+		5D4A5454278DD00100740E7C /* GiftViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5453278DD00100740E7C /* GiftViewModelTests.swift */; };
+		5D4A5456278DD35B00740E7C /* GiftViewModelFetchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5455278DD35B00740E7C /* GiftViewModelFetchTest.swift */; };
 		5D9DA6D82789630E0021E50C /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D72789630E0021E50C /* GiftData.swift */; };
 		5D9DA6DA278968710021E50C /* GiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D9278968710021E50C /* GiftDataModel.swift */; };
 		5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA22786FA0400056B85 /* AppDelegate.swift */; };
@@ -15,7 +22,6 @@
 		5DC9DCAA2786FA0400056B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA82786FA0400056B85 /* Main.storyboard */; };
 		5DC9DCAC2786FA0600056B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCAB2786FA0600056B85 /* Assets.xcassets */; };
 		5DC9DCAF2786FA0600056B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC9DCAD2786FA0600056B85 /* LaunchScreen.storyboard */; };
-		5DC9DCBA2786FA0700056B85 /* YouGotaGiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCB92786FA0700056B85 /* YouGotaGiftTests.swift */; };
 		5DC9DCC52786FA0700056B85 /* YouGotaGiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCC42786FA0700056B85 /* YouGotaGiftUITests.swift */; };
 		5DC9DCDC2786FCB000056B85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCDB2786FCB000056B85 /* HomeViewController.swift */; };
 		5DC9DCE527870DCA00056B85 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCE427870DCA00056B85 /* NetworkRequest.swift */; };
@@ -54,6 +60,13 @@
 
 /* Begin PBXFileReference section */
 		5D4A5435278D9D7A00740E7C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5D4A5447278DC2A900740E7C /* YouGotaGiftURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftURLTests.swift; sourceTree = "<group>"; };
+		5D4A5449278DC7CE00740E7C /* YouGotaGiftNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftNetworkTest.swift; sourceTree = "<group>"; };
+		5D4A544B278DCBB200740E7C /* InvalidGiftRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidGiftRequestTest.swift; sourceTree = "<group>"; };
+		5D4A544D278DCEA400740E7C /* gifts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gifts.json; sourceTree = "<group>"; };
+		5D4A5451278DCEFC00740E7C /* YouGotaGiftParseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftParseTest.swift; sourceTree = "<group>"; };
+		5D4A5453278DD00100740E7C /* GiftViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewModelTests.swift; sourceTree = "<group>"; };
+		5D4A5455278DD35B00740E7C /* GiftViewModelFetchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewModelFetchTest.swift; sourceTree = "<group>"; };
 		5D9DA6D72789630E0021E50C /* GiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
 		5D9DA6D9278968710021E50C /* GiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDataModel.swift; sourceTree = "<group>"; };
 		5DC9DC9F2786FA0400056B85 /* YouGotaGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGotaGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +77,6 @@
 		5DC9DCAE2786FA0600056B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DC9DCB02786FA0600056B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DC9DCB52786FA0700056B85 /* YouGotaGiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouGotaGiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DC9DCB92786FA0700056B85 /* YouGotaGiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftTests.swift; sourceTree = "<group>"; };
 		5DC9DCBB2786FA0700056B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DC9DCC02786FA0700056B85 /* YouGotaGiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouGotaGiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC9DCC42786FA0700056B85 /* YouGotaGiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftUITests.swift; sourceTree = "<group>"; };
@@ -154,8 +166,14 @@
 		5DC9DCB82786FA0700056B85 /* YouGotaGiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				5DC9DCB92786FA0700056B85 /* YouGotaGiftTests.swift */,
+				5D4A5447278DC2A900740E7C /* YouGotaGiftURLTests.swift */,
+				5D4A5449278DC7CE00740E7C /* YouGotaGiftNetworkTest.swift */,
+				5D4A544B278DCBB200740E7C /* InvalidGiftRequestTest.swift */,
+				5D4A5451278DCEFC00740E7C /* YouGotaGiftParseTest.swift */,
+				5D4A5453278DD00100740E7C /* GiftViewModelTests.swift */,
+				5D4A5455278DD35B00740E7C /* GiftViewModelFetchTest.swift */,
 				5DC9DCBB2786FA0700056B85 /* Info.plist */,
+				5D4A544D278DCEA400740E7C /* gifts.json */,
 			);
 			path = YouGotaGiftTests;
 			sourceTree = "<group>";
@@ -420,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4A544E278DCEA400740E7C /* gifts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +500,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DC9DCBA2786FA0700056B85 /* YouGotaGiftTests.swift in Sources */,
+				5D4A5448278DC2A900740E7C /* YouGotaGiftURLTests.swift in Sources */,
+				5D4A544C278DCBB200740E7C /* InvalidGiftRequestTest.swift in Sources */,
+				5D4A5452278DCEFC00740E7C /* YouGotaGiftParseTest.swift in Sources */,
+				5D4A5456278DD35B00740E7C /* GiftViewModelFetchTest.swift in Sources */,
+				5D4A5454278DD00100740E7C /* GiftViewModelTests.swift in Sources */,
+				5D4A544A278DC7CE00740E7C /* YouGotaGiftNetworkTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +714,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 58ZF499A75;
 				INFOPLIST_FILE = YouGotaGiftTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -712,7 +736,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 58ZF499A75;
 				INFOPLIST_FILE = YouGotaGiftTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
