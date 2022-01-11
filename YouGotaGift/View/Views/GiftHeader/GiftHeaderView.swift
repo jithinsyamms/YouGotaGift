@@ -50,7 +50,7 @@ class GiftHeaderView: UICollectionReusableView {
             headerImage.loadImageFromURL(urlString: categoryImageUrl)
         }
         overlayView.backgroundColor = UIColor.black
-        overlayView.alpha = 0.25
+        overlayView.alpha = 0.15
         headerTitle.text = selectedCategory.title ?? ""
         headerSubtitle.text = selectedCategory.caption ?? ""
         categoryTitle.text = selectedCategory.name
