@@ -53,7 +53,35 @@ class GiftDataModel {
         monitor.start(queue: .global())
     }
 
+    func loadTestData() {
+        let bundle = Bundle(for: type(of: self))
+        guard let json = bundle.url(forResource: "gifts", withExtension: "json") else {
+            return
+        }
+        do {
+            let jsonData = try Data(contentsOf: json)
+            let giftData = try JSONDecoder().decode(GiftData.self, from: jsonData)
+            self.loadedDataOnce = true
+            self.giftData = giftData
+            self.setUpData()
+            DispatchQueue.main.async {
+                self.delegate?.dataChanged()
+            }
+
+        } catch _ {
+            DispatchQueue.main.async {
+                self.delegate?.errorLoadingData()
+            }
+        }
+
+    }
+
     func fetchGifts(categoryId: Int = -1, page: Int = 1, url: String = "") {
+
+        if AppDelegate.isRunningUITest {
+          loadTestData()
+          return
+        }
         guard !isLoading else {
             return
         }

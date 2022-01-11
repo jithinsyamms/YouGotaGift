@@ -47,7 +47,7 @@ class GiftViewModelFetchTest: XCTestCase, GiftDataDelegate {
 
     func testViewModelFetchData() throws {
             giftViewModel = GiftDataModel()
-            giftViewModel.fetchGifts(categoryId: 32, page: 1, url: "")
+            giftViewModel.fetchGifts()
             waitForExpectations(timeout: 20, handler: nil)
     }
 

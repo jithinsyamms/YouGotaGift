@@ -15,6 +15,7 @@
 		5D4A5452278DCEFC00740E7C /* YouGotaGiftParseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5451278DCEFC00740E7C /* YouGotaGiftParseTest.swift */; };
 		5D4A5454278DD00100740E7C /* GiftViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5453278DD00100740E7C /* GiftViewModelTests.swift */; };
 		5D4A5456278DD35B00740E7C /* GiftViewModelFetchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A5455278DD35B00740E7C /* GiftViewModelFetchTest.swift */; };
+		5D4A5458278E23FA00740E7C /* gifts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A5457278E23FA00740E7C /* gifts.json */; };
 		5D9DA6D82789630E0021E50C /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D72789630E0021E50C /* GiftData.swift */; };
 		5D9DA6DA278968710021E50C /* GiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DA6D9278968710021E50C /* GiftDataModel.swift */; };
 		5DC9DCA32786FA0400056B85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC9DCA22786FA0400056B85 /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 		5D4A5451278DCEFC00740E7C /* YouGotaGiftParseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotaGiftParseTest.swift; sourceTree = "<group>"; };
 		5D4A5453278DD00100740E7C /* GiftViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewModelTests.swift; sourceTree = "<group>"; };
 		5D4A5455278DD35B00740E7C /* GiftViewModelFetchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewModelFetchTest.swift; sourceTree = "<group>"; };
+		5D4A5457278E23FA00740E7C /* gifts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gifts.json; sourceTree = "<group>"; };
 		5D9DA6D72789630E0021E50C /* GiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
 		5D9DA6D9278968710021E50C /* GiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftDataModel.swift; sourceTree = "<group>"; };
 		5DC9DC9F2786FA0400056B85 /* YouGotaGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGotaGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 				5DC9DCA82786FA0400056B85 /* Main.storyboard */,
 				5DC9DCAD2786FA0600056B85 /* LaunchScreen.storyboard */,
 				5DC9DCB02786FA0600056B85 /* Info.plist */,
+				5D4A5457278E23FA00740E7C /* gifts.json */,
 			);
 			path = YouGotaGift;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				5DC9DCFB27874C8800056B85 /* GiftItemCell.xib in Resources */,
 				5DC9DCFF27874CC300056B85 /* GiftHeaderView.xib in Resources */,
 				5DC9DCAA2786FA0400056B85 /* Main.storyboard in Resources */,
+				5D4A5458278E23FA00740E7C /* gifts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
