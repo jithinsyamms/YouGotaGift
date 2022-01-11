@@ -77,6 +77,12 @@ extension HomeViewController: GiftDataDelegate {
         activityIndicator.stopAnimating()
         view.isUserInteractionEnabled = true
 
+        if giftCategories == nil {
+            collectionView.backgroundView = getErrorView()
+        } else {
+            collectionView.backgroundView = nil
+        }
+
     }
     func dataChanged() {
         giftBrands = giftDataModel.getGiftBrands()
@@ -136,6 +142,17 @@ extension HomeViewController: UICollectionViewDataSource {
         if let giftBrands = giftBrands, indexPath.row == giftBrands.count - 1 {
             giftDataModel.fetchMore()
         }
+    }
+
+    func getErrorView() -> UIView {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: collectionView.bounds.size.width,
+                                          height: 150))
+        label.text = "No data"
+        label.textColor = UIColor.purple
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.sizeToFit()
+        return label
     }
 
 }
