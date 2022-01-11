@@ -57,10 +57,17 @@ class HomeViewController: UIViewController {
     }
 
     func setNavigationBar() {
-        let logo = UIImage(named: "Icon-29")
+        let logo = UIImage(named: "NavigationIcon")
         let imageView = UIImageView(image: logo)
         self.navigationItem.titleView = imageView
         activityIndicator.hidesWhenStopped = true
+    }
+
+    func showNetworkError() {
+        let alert = UIAlertController(title: "No Internet Connection",
+                                      message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -84,6 +91,11 @@ extension HomeViewController: GiftDataDelegate {
             collectionView.backgroundView = nil
         }
         collectionView.reloadData()
+
+        if !giftDataModel.isNetworkAvailable {
+            showNetworkError()
+        }
+
     }
 
     func dataChanged() {

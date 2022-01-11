@@ -67,12 +67,14 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8sS-04-szZ">
-                                <rect key="frame" x="4" y="23" width="560" height="471.5"/>
+                                <rect key="frame" x="8" y="23" width="552" height="473.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="YouGotaGift Happy Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpj-Bf-VjW">
-                                <rect key="frame" x="8" y="499.5" width="552" height="18"/>
+                                <rect key="frame" x="8" y="501.5" width="552" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="YXU-jU-gBU"/>
+                                    <constraint firstAttribute="height" constant="18" id="YXU-jU-gBU">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="24"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,11 +97,11 @@
                             <constraint firstAttribute="bottom" secondItem="uG7-ue-Sk5" secondAttribute="bottom" constant="5" id="VSK-xm-Rzi"/>
                             <constraint firstItem="QkC-gF-5gG" firstAttribute="leading" secondItem="yYE-EZ-wIh" secondAttribute="leading" constant="8" id="deq-q0-sQ0"/>
                             <constraint firstItem="8sS-04-szZ" firstAttribute="top" secondItem="QkC-gF-5gG" secondAttribute="bottom" constant="5" id="eDx-x4-90i"/>
-                            <constraint firstAttribute="trailing" secondItem="8sS-04-szZ" secondAttribute="trailing" constant="4" id="eOQ-EF-k5e"/>
+                            <constraint firstAttribute="trailing" secondItem="8sS-04-szZ" secondAttribute="trailing" constant="8" id="eOQ-EF-k5e"/>
                             <constraint firstAttribute="trailing" secondItem="uG7-ue-Sk5" secondAttribute="trailing" constant="8" id="f36-V3-fXM"/>
                             <constraint firstItem="Wpj-Bf-VjW" firstAttribute="leading" secondItem="yYE-EZ-wIh" secondAttribute="leading" constant="8" id="lvu-wg-l7c"/>
-                            <constraint firstItem="8sS-04-szZ" firstAttribute="leading" secondItem="yYE-EZ-wIh" secondAttribute="leading" constant="4" id="slk-6B-6q6"/>
-                            <constraint firstItem="uG7-ue-Sk5" firstAttribute="top" secondItem="Wpj-Bf-VjW" secondAttribute="bottom" constant="5" id="v8i-28-Nas"/>
+                            <constraint firstItem="8sS-04-szZ" firstAttribute="leading" secondItem="yYE-EZ-wIh" secondAttribute="leading" constant="8" id="slk-6B-6q6"/>
+                            <constraint firstItem="uG7-ue-Sk5" firstAttribute="top" secondItem="Wpj-Bf-VjW" secondAttribute="bottom" constant="3" id="v8i-28-Nas"/>
                         </constraints>
                     </view>
                 </subviews>

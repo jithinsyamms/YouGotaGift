@@ -35,7 +35,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectedLatest" translatesAutoresizingMaskIntoConstraints="NO" id="X6P-yQ-ZPJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectedCategoryImage" translatesAutoresizingMaskIntoConstraints="NO" id="X6P-yQ-ZPJ">
                                 <rect key="frame" x="116" y="-5" width="25" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="9Un-TK-dJE"/>
@@ -82,7 +82,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="selectedLatest" width="256" height="256"/>
+        <image name="selectedCategoryImage" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
