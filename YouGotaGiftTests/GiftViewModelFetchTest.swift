@@ -34,6 +34,7 @@ class GiftViewModelFetchTest: XCTestCase, GiftDataDelegate {
     }
 
     func dataChanged() {
+        Thread.sleep(forTimeInterval: 2)
         XCTAssertNotNil(giftViewModel.giftData)
         XCTAssertGreaterThan(giftViewModel.giftCategories.count, 0)
         XCTAssertGreaterThan(giftViewModel.brandDict.count, 0)
